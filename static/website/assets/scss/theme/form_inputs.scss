@@ -1,0 +1,47 @@
+//forms  ////////////////////////////////
+
+.bg-primary .form-control:not(:active)::-webkit-input-placeholder,
+.text-light .form-control:not(:active)::-webkit-input-placeholder {
+    color: $light;
+}
+.navbar-dark .form-control:not(:active)::placeholder {
+    color: $light;
+    opacity: 1;
+}
+
+.bg-primary .form-control:active::-webkit-input-placeholder,
+.text-light .form-control:active::-webkit-input-placeholder {
+    color: $dark;
+}
+
+.bg-primary .form-control:focus::-webkit-input-placeholder,
+.text-light .form-control:focus::-webkit-input-placeholder {
+    color: $dark;
+}
+
+textarea.form-control,
+select.form-control{
+	border-radius: 0;
+	border-right-color: transparent;
+	border-left-color: transparent;
+	border-top-color: transparent;
+}
+
+.input-group .form-control:not(:first-child){
+	border-left-color: transparent;
+}
+.input-group-btn{
+	font-size: 1em;
+}
+.input-group-btn:not(:first-child) > .btn {
+
+    border-top-right-radius: $input-border-radius-lg;
+    border-bottom-right-radius: $input-border-radius-lg;
+}
+
+.form-control:focus{
+		box-shadow: none;
+};
+.input-group .form-control:not(:first-child):focus{
+    border-left-color: $primary;
+}

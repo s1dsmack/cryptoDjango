@@ -1,0 +1,1455 @@
+{% load static %}
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="{% static 'website/assets/images/logos/crypto_favicon.ico' %}">
+  <!-- Bootstrap core CSS + Orange theme -->
+  <link rel="stylesheet" href="{% static 'website/assets/css/theme/style.css' %}">
+  <link rel="stylesheet" href="{% static 'website/assets/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'website/assets/css/templates/crypto/style-crypto.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+
+
+<title>Crypto News Network</title>
+
+
+  <!-- Custom styles for this template -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+<script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+
+  <style>
+    
+    #formSearch {
+      border-right: 2px;
+      margin-bottom: 15px;
+    }
+
+    #buttonSearch {
+      display: inline;
+      border: 1px solid gold;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      margin-top: .05px;
+      margin-left: -86px;
+      width: 7em;
+      height: 3.3em;
+    }
+
+    .site-wrapper p-0 cover {
+      margin: 0 !important;
+    }
+
+    #site-wrapper-img {
+      object-fit: cover;
+      opacity: 2.5;
+      height: 125%;
+    }
+
+    #img-learn {
+      object-fit: cover;
+      opacity: .7;
+    }
+
+    #learn-bg-img {
+      object-fit: cover;
+      opacity: 0.2;
+      /*margin-top: auto !important;
+      margin-bottom: auto !important;*/
+    }
+
+    #learn {
+      margin: 0;
+      overflow: hidden;
+      height: 125%;
+    }
+
+    #fa-check1 {
+      color: #FFE81F !important; /* Color is StarWars Banana Yellow */
+    }
+
+    #fa-check2 {
+      color: #E66C2C !important; /* Color is dark orange */
+    }
+
+    #fa-check3 {
+      color: #20B2AA !important; /* Color is lightseagreen */ 
+    }
+
+    #fa-check4 {
+      color: gold !important; /* Color is gold */ 
+    }
+
+    #font-color1 {
+      color: #1E90FF; /* Color is StarWars blue */
+    }
+
+    #font-color2 {
+      color: white; /* Color is space white */
+    }
+
+    #fa-check2:hover {
+      color: gold !important; /* mouse over link is gold */
+    }
+
+    #fa-check3:hover {
+      color: #1E90FF !important; /* mouse over link is StarWars blue */
+    }
+
+    .display-5:hover {
+      color: #20B2AA; /* mouse over link is lightseagreen */
+    }
+
+    .display-3:hover {
+      color: gold !important; /* mouse over link is gold */
+    }
+
+    .card-text:hover {
+      color: #1E90FF; /* mouse over link is StarWars blue */
+    }
+
+    #read-more:hover {
+      color: gold !important; /* mouse over link is gold */
+    }
+
+    .small:hover {
+      color: gold !important; /* mouse over link is gold */ 
+    }
+
+    #th:hover {
+      color: gold !important; /* mouse over link is gold */
+    }
+
+    #td:hover {
+      color: gold !important; /* mouse over link is gold */
+    }
+
+    .nav-link:hover {
+      color: gold !important; /* mouse over link is gold */
+    }
+
+    .navbar-brand:hover {
+      color: gold !important; /* mouse over link is gold */
+    }
+
+    #front-page:hover {
+      color: gold !important; /* mouse over link is gold */
+    }
+
+    #front-page2:hover {
+      color: #20B2AA; /* mouse over link is lightseagreen */
+    }
+
+    .fa:hover {
+      color: #20B2AA !important; /* mouse over link is lightseagreen */ 
+    }
+
+    #contact2 {
+      color: #20B2AA !important; /* to make form input more visible with lightseagreen */
+    }
+
+    #contact2:hover {
+      color: gold !important; /* mouse over link is gold */
+    }
+
+    #news-card:hover {
+      color: #20B2AA !important; /* mouse over link is lightseagreen */ 
+    }
+
+    #analyst_desk {
+      opacity: .7 !important; /* assist in creating lightup effect on hover */
+    }
+
+    #analyst_desk:hover {
+      opacity: 2.5 !important; /* lightup effect on hover */ 
+    }
+
+    #news-desk {
+      opacity: .7 !important; /* assist in creating lightup effect on hover */
+    }
+
+    #news-desk:hover {
+      opacity: 2.5 !important; /* lightup effect on hover */ 
+      color: #20B2AA !important; /* mouse over link is lightseagreen */ 
+    }
+
+    #video {
+      opacity: .7 !important; /* assist in creating lightup effect on hover */
+    }
+
+    #video:hover {
+      opacity: 2.5 !important; /* lightup effect on hover */ 
+    }
+
+    #back2Top {
+    width: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    z-index: 999;
+    display: none;
+    cursor: pointer;
+    -moz-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    background-color: #1E90FF; /* StarWars blue */
+    color: #E66C2C !important; /* dark orange */
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+    }
+    
+    #back2Top:hover {
+        background-color: #20B2AA; /* lightseagreen */
+        color: gold !important;
+    }
+
+  </style>
+
+</head>
+
+<body class="loader-in">
+<div id="loader-bitcoin" class="justify-content-center d-flex flex-wrap">
+	<div id="bitcoin">
+	  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+		 width="200px" height="200px" viewBox="100 100 400 400" xml:space="preserve">
+		<filter id="dropshadow" height="130%">
+	  <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+	  <feOffset dx="0" dy="0" result="offsetblur"/>
+	  <feFlood flood-color="red"/>
+	<feComposite in2="offsetblur" operator="in"/>
+	<feMerge>
+	<feMergeNode/>
+	<feMergeNode in="SourceGraphic"/>
+	</feMerge>
+	</filter>          
+	<path class="path" style="filter:url(#dropshadow)" fill="#000000" d="M446.089,261.45c6.135-41.001-25.084-63.033-67.769-77.735l13.844-55.532l-33.801-8.424l-13.48,54.068
+		c-8.896-2.217-18.015-4.304-27.091-6.371l13.568-54.429l-33.776-8.424l-13.861,55.521c-7.354-1.676-14.575-3.328-21.587-5.073
+		l0.034-0.171l-46.617-11.64l-8.993,36.102c0,0,25.08,5.746,24.549,6.105c13.689,3.42,16.159,12.478,15.75,19.658L208.93,357.23
+		c-1.675,4.158-5.925,10.401-15.494,8.031c0.338,0.485-24.579-6.134-24.579-6.134l-9.631,40.468l36.843,9.188
+		c8.178,2.051,16.209,4.19,24.098,6.217l-13.978,56.17l33.764,8.424l13.852-55.571c9.235,2.499,18.186,4.813,26.948,6.995
+		l-13.802,55.309l33.801,8.424l13.994-56.061c57.648,10.902,100.998,6.502,119.237-45.627c14.705-41.979-0.731-66.193-31.06-81.984
+		C425.008,305.984,441.655,291.455,446.089,261.45z M368.859,369.754c-10.455,41.983-81.128,19.285-104.052,13.589l18.562-74.404
+		C306.28,314.65,379.774,325.975,368.859,369.754z M379.302,260.846c-9.527,38.187-68.358,18.781-87.442,14.023l16.828-67.489
+		C327.767,212.14,389.234,221.02,379.302,260.846z"/>
+			  
+	</svg>
+	</div>
+</div>
+
+  <div id="site-wrapper-img" class="site-wrapper p-0 cover" style="background-image: url({% static 'website/assets/images/photos/backgroundpic_bitcoin_1c.jpg' %})">
+	
+    <div class="site-wrapper-inner header-overlay-blue	 cover">
+	<!-- particlesjs component -->
+		<div id="particles-js"></div>
+      <div class="cover-container relative">
+
+       <header class="">
+	   
+         <nav class="fixed-top  navbar text-white  navbar-expand-md  navbar-dark bg-transparent mb-5">
+			<div class="container">
+                    <a class="navbar-brand" href="{% url 'home' %}"> <img src="{% static 'website/assets/images/icons/crypto/svg/block_chain.svg' %}" class="currency-icon img-fluid" alt="CryptoDesk"> Crypto News Network</a>
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="navbar-collapse collapse" id="navbarsExampleDefault">
+                      <ul class="navbar-nav mr-auto"> 
+                        <li class="nav-item">
+                          <a class="nav-link" href="#learn">Learn</a>
+                        </li>
+						            <li class="nav-item">
+                          <a class="nav-link" href="#news">News</a>
+                        </li>
+						            <li class="nav-item">
+                          <a class="nav-link" href="#live-prices">Live Prices</a>
+                        </li>
+						            <li class="nav-item">
+                          <a class="nav-link" href="#videos">Videos</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#analysts">Analysts</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#research">Research</a>
+                        </li> 
+						            <li class="nav-item">
+                          <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                      </ul>
+
+                      <div class="mb-0 mt-0 mr-0 align-self-right pt-0 d-inline-block">
+                        <a href="https://twitter.com/CryptoNewsNtwk" role="button" class="  p-2 m-2"><i class="fa fa-twitter  text-light " aria-hidden="true"></i></a>
+                        <a href="https://www.facebook.com/Crypto-News-Network-107942398069141" role="button" class="  p-2 m-2"><i class="fa fa-facebook  text-light " aria-hidden="true"></i></a>
+                        <a href="https://www.linkedin.com/in/cryptonewsnetwork/" role="button" class="  p-2 m-2"><i class="fa fa-linkedin  text-light " aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/webmaster.cryptonewsnetwork/" role="button" class="  p-2 m-2"><i class="fa fa-instagram  text-light " aria-hidden="true"></i></a>
+                      </div>
+                    </div>
+					</div>
+                  </nav>
+				
+        </header>
+
+        <main role="main" class="inner">
+		 <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-12  ">
+          <h1 id="front-page" class="cover-heading display-1 mt-5 pt-5 mb-2" style="color: #E66C2C;">Want To Buy Bitcoin?</h1>
+          <h3 id="front-page" class="display-5" style="font-size: 160%;"><i><b>Check us out! We've got the latest in blockchain news and research!</b></i></h3>
+          <p class="lead">
+            <a href="#learn" class="btn  scroll bgd-gradient-blue btn-lg  mt-3 mb-3 mr-2 ml-0 btn-round btn-rised">Learn more</a>
+            <a href="#subscribe" class="btn  scroll bgd-gradient-orange btn-lg  mt-3 mb-3 mr-2 ml-0 btn-round btn-rised">Subscribe</a>
+          </p>
+		  </div>
+		
+    </div>
+
+  </div>
+        </main>
+      </div>
+    </div>
+  </div>
+  <!-- ***** End of First Page Area ***** -->
+
+	<!-- ***** Start Area of Crypto Learning Section ***** -->
+  <section id="learn" class="pt-5 pb-5 bg-dark text-light text-left">
+    <!--<div class="container">
+  
+      <div class="site-wrapper-inner header-overlay-dark  cover">-->
+      
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-7 col-xl-7">
+              <a href="https://www.coindesk.com/learn/bitcoin-101" style="text-decoration: none;"><h3 id="fa-check2" class="display-5 text-warning mt-5"><strong>Bitcoin 101</strong> </h3></a>
+              <a href="https://www.coindesk.com/learn/bitcoin-101" style="text-decoration: none;"><p id="fa-check3" class="lead">Learn all about Bitcoin through our access to in-depth educational 101 publications. We have links to 16 chapters on Bitcoin basics to help you gain a thorough understanding of Bitcoin quickly.<br/><br/>Start your 101 learning now!</p></a>
+              <div class="row justify-content-center">
+                <div class="col-6 col-md-6 col-lg-6 col-xl-6 pl-md-5">
+                  <ul class="list-unstyled">
+                    <a href="https://www.coindesk.com/learn/bitcoin-101/what-is-bitcoin" style="text-decoration: none;"><li id="fa-check2" class="mb-3"> <span id="fa-check3" class="fa fa-check text-warning"></span> What Is Bitcoin?</li></a>
+                    <a href="https://www.coindesk.com/learn/bitcoin-101/why-use-bitcoin" style="text-decoration: none;"><li id="fa-check2" class="mb-3"> <span id="fa-check3" class="fa fa-check text-warning"></span> Why Use Bitcoin?</li></a>
+                    <a href="https://www.coindesk.com/learn/bitcoin-101/how-do-bitcoin-transactions-work" style="text-decoration: none;"><li id="fa-check2" class="mb-3"> <span id="fa-check3" class="fa fa-check text-warning"></span> How Transactions Work?</li></a>
+                     
+
+
+
+                  </ul>
+                </div>
+                <div class="col-6 col-md-6 col-lg-6 col-xl-6">
+                  <ul class="list-unstyled">
+                      <a href="https://www.coindesk.com/learn/bitcoin-101/how-bitcoin-mining-works" style="text-decoration: none;"><li id="fa-check2" class="mb-3"> <span id="fa-check3" class="fa fa-check text-warning"></span> How Bitcoin Mining Works</li></a>
+                      <a href="https://www.coindesk.com/learn/bitcoin-101/how-to-set-up-a-miner" style="text-decoration: none;"><li id="fa-check2" class="mb-3">  <span id="fa-check3" class="fa fa-check text-warning"></span> How to Setup a Bitcoin Miner</li></a>
+                      <a href="https://www.coindesk.com/learn/bitcoin-101/who-is-satoshi-nakamoto" style="text-decoration: none;"><li id="fa-check2" class="mb-3">  <span id="fa-check3" class="fa fa-check text-warning"></span> Who Is Satoshi Nakamoto?</li></a>
+                     
+
+
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-5 col-xl-5">
+              <img id="img-learn" src="{% static 'website/assets/images/visuals/bitcoin-2.png' %}" class="rounded img-fluid mt-3 " alt="bitcoin">
+            </div>
+          </div>
+          <!-- /.row --> 
+        </div>
+	  
+	       <div class="container"> 
+        <div class="row">
+		 <div class="col-12 col-md-12 col-lg-5 col-xl-5">
+            <img id="img-learn" src="{% static 'website/assets/images/visuals/bitcoin10.png' %}" class="rounded img-fluid mt-3 " alt="bitcoin">
+          </div>
+          <div class="col-12 col-md-12 col-lg-7 col-xl-7">
+            <a href="https://www.coindesk.com/crypto" style="text-decoration: none;"><h3 id="fa-check2" class="display-5 text-success mt-5"><strong>Crypto Assets 101</strong> </h3>
+            <a href="https://www.coindesk.com/crypto" style="text-decoration: none;"><p id="fa-check3" class="lead">Crypto-assets is a broad term covering all assets stored on distributed ledgers. This includes all cryptocurrencies as well as non-currency assets such as security tokens and utility tokens.<br/><br/>Learn about some of the more popular assets!</p></a>
+            <div class="row justify-content-center">
+              <div class="col-6 col-md-6 col-lg-6 col-xl-6 pl-md-5">
+                <ul class="list-unstyled">
+                  <a href="https://www.coindesk.com/crypto/0x-zrx" style="text-decoration: none;"><li id="fa-check2" class="mb-3"> <span id="fa-check3" class="fa fa-check text-warning"></span> Ox (ZRX)</li></a>
+                  <a href="https://www.coindesk.com/crypto/cosmos" style="text-decoration: none;"><li id="fa-check2" class="mb-3"> <span id="fa-check3" class="fa fa-check text-warning"></span> Cosmos (ATOM)</li></a>
+                  <a href="https://www.coindesk.com/crypto/zcash" style="text-decoration: none;"><li id="fa-check2" class="mb-3">  <span id="fa-check3" class="fa fa-check text-warning"></span> Zcash (ZEC)</li></a>
+                   
+
+
+
+                </ul>
+              </div>
+              <div class="col-6 col-md-6 col-lg-6 col-xl-6">
+                <ul class="list-unstyled">
+                    <a href="https://www.coindesk.com/crypto/grin-cryptocurrency" style="text-decoration: none;"><li id="fa-check2" class="mb-3"> <span id="fa-check3" class="fa fa-check text-warning"></span> Grin (GRIN)</li></a>
+                    <a href="https://www.coindesk.com/crypto/mastercoin" style="text-decoration: none;"><li id="fa-check2" class="mb-3">  <span id="fa-check3" class="fa fa-check text-warning"></span> Mastercoin (OMNI)</li></a>
+                    <a href="https://www.coindesk.com/crypto/dash-cryptocurrency" style="text-decoration: none;"><li id="fa-check2" class="mb-3">  <span id="fa-check3" class="fa fa-check text-warning"></span> Dash (DASH)</li></a>
+                   
+
+
+
+                </ul>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+        <!-- /.row -->
+      </div>
+    </div>
+  </div>
+	  
+
+  <!-- /.content -->
+  </section>
+  <!-- ***** End Area of Crypto Learning Section ***** -->
+
+	<!-- ***** Start Area of Crypto News Desk ***** -->
+  <section id="news" class="bg-dark text-white pt-5 pb-5">
+      <div class="container">
+					<div class="row">
+						 <div class="col-xs-12 col-lg-12 text-center">
+						<h3 id="fa-check2" class="display-3 mb-2">Crypto News Desk</h3>
+            <h4 class="display-5">See the latest crypto headlines featured. Click to read more!</h4>
+            </div>
+          </div>
+      </div>
+                    
+    <div class="container">
+      <div class="row">
+        {% for x in api.Data %}
+          <div class="col-sm">
+            <!--<div class="card header-h75" style="width: 18rem;">-->
+            <div class="card card-block d-flex" style="height: 450px; line-height: 20px">
+              <img src="{{ x.imageurl }}" class="card-img-top" alt="{{ x.source }}">
+              <div class="card-body">
+                <a id="news-desk" href="{{ x.url }}" class="btn btn-secondary" style="color:blue;"><strong>[Read More >>]</strong></a>
+                <h5 id="news-card" class="card-title" style="color:black; font-size:95%;">{{ x.title }}</h5>
+                <!--<p class="card-text">{{ x.body }}</p>-->
+              </div>
+            </div>
+            <br/>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+                    <!--<div class="row">
+                      <div class="col-xs-6 col-lg-4">
+                        <a href="javascript:void(0)" class="card-block-link cards-padding" title="Envelope">
+                          <div class="card card-block card-default text-center animated  m-shadow-16  text-white bgd-gradient-blue">
+                            <div class="card-body">
+                              <img src="{% static 'website/assets/images/icons/crypto/svg/wallet.svg' %}" class="featured-icon img-fluid" alt="wallet">
+                              <h4 class="display-5 mt-3">Wallet</h4>
+							  <p>Bitcoin is a revolutionary invention of the last decade. Its essential meaning is money digitization.</p>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+					  <div class="col-xs-6 col-lg-4">
+                        <a href="javascript:void(0)" class="card-block-link cards-padding" title="Envelope">
+                          <div class="card card-block card-default text-center animated  m-shadow-16  text-white bgd-gradient-blue">
+                            <div class="card-body">
+                              <img src="{% static 'website/assets/images/icons/crypto/svg/send.svg' %}" class="featured-icon img-fluid" alt="wallet">
+                              <h4 class="display-5 mt-3">Send</h4>
+							  <p>Bitcoin is a revolutionary invention of the last decade. Its essential meaning is money digitization.</p>
+                            </div>
+                          </div>
+                        </a>
+                      </div> 
+					   <div class="col-xs-6 col-lg-4">
+                        <a href="javascript:void(0)" class="card-block-link cards-padding" title="Envelope">
+                          <div class="card card-block card-default text-center animated  m-shadow-16  text-white bgd-gradient-blue">
+                            <div class="card-body">
+                              <img src="{% static 'website/assets/images/icons/crypto/svg/receive.svg' %}" class="featured-icon img-fluid" alt="wallet">
+                              <h4 class="display-5 mt-3">Receive</h4>
+							  <p>Bitcoin is a revolutionary invention of the last decade. Its essential meaning is money digitization.</p>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+					  <div class="col-xs-6 col-lg-4">
+                        <a href="javascript:void(0)" class="card-block-link cards-padding" title="Envelope">
+                          <div class="card card-block card-default text-center animated  m-shadow-16  text-white bgd-gradient-blue">
+                            <div class="card-body">
+                              <img src="{% static 'website/assets/images/icons/crypto/svg/decryption.svg' %}" class="featured-icon img-fluid" alt="wallet">
+                              <h4 class="display-5 mt-3">Secure</h4>
+							  <p>Bitcoin is a revolutionary invention of the last decade. Its essential meaning is money digitization.</p>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+					  <div class="col-xs-6 col-lg-4">
+                        <a href="javascript:void(0)" class="card-block-link cards-padding" title="Envelope">
+                          <div class="card card-block card-default text-center animated  m-shadow-16  text-white bgd-gradient-blue">
+                            <div class="card-body">
+                              <img src="{% static 'website/assets/images/icons/crypto/svg/p2p.svg' %}" class="featured-icon img-fluid" alt="wallet">
+                              <h4 class="display-5 mt-3">Exchange</h4>
+							  <p>Bitcoin is a revolutionary invention of the last decade. Its essential meaning is money digitization.</p>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+					 
+					  <div class="col-xs-6 col-lg-4">
+                        <a href="javascript:void(0)" class="card-block-link cards-padding" title="Envelope">
+                          <div class="card card-block card-default text-center animated  m-shadow-16  text-white bgd-gradient-blue">
+                            <div class="card-body">
+                              <img src="{% static 'website/assets/images/icons/crypto/svg/digital_key.svg' %}" class="featured-icon img-fluid" alt="wallet">
+                              <h4 class="display-5 mt-3"> Insurance</h4>
+							  <p>Bitcoin is a revolutionary invention of the last decade. Its essential meaning is money digitization.</p>
+                            </div>
+                          </div>
+                        </a>
+                      </div>-->
+                     
+                  
+                     
+                    </div>
+                  </div>
+  </section>
+  <!-- ***** End Area of Crypto News Desk ***** -->
+	
+  <!-- ***** Start Area of Live Market Pricing ***** -->
+  <section id="live-prices" class="pt-5 pb-5 bg-dark text-white"> 
+		<div class="container mb-5">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+			   <h3 id="fa-check2" class="display-3 mb-2" style="color: #E66C2C;">Crypto Currency Desk</h3>
+			   <h4 class="display-5 ">Don't see your favorite crypto in our list? Try our lookup feature below!</h4>
+            <div class="table-responsive">
+            <table class="table table-striped table-hover text-left">
+            <!--Added Search Box Code-->
+            <thead class="">
+              <tr class="bgd-gradient-blue text-light">
+                <th id="th">Cryptocurrency</th>
+                <th id="th">Price</th>
+                <th id="th">24h High</th>
+                <th id="th">24h Low</th>
+                <th id="th">Market Cap</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for key,value in price.DISPLAY.items %}  
+              <tr>
+                <td id="td">{{ key }}</td>
+                <td id="td">{{ value.USD.PRICE }}</td>
+                <td id="td">{{ value.USD.HIGHDAY }}</td>
+                <td id="td">{{ value.USD.LOWDAY }}</td>
+                <td id="td">{{ value.USD.MKTCAP }}</td>
+              </tr>
+              {% endfor %}    
+
+              <!--<tr>
+                <td><img src="{% static 'website/assets/images/icons/crypto/svg/bitcoin.svg' %}" class="currency-icon img-fluid" alt="bitcoin">Bitcoin</td>
+                <td>9,290.06 $</td>
+                <td class="up">14.44%</td>
+                <td>218,087 BTC</td>
+                <td>923,629</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'website/assets/images/icons/crypto/svg/ethereum.svg' %}" class="currency-icon img-fluid" alt="Ethereum">Ethereum</td>
+                <td>407.13 $</td>
+                <td class="up">16.17%</td>
+                <td>1,223,367 ETH</td>
+                <td>663,133</td>
+              </tr>
+              
+              <tr>
+                <td><img src="{% static 'website/assets/images/icons/crypto/svg/ripple.svg' %}" class="currency-icon img-fluid" alt="Ripple">Ripple</td>
+                <td>0.22 $</td>
+                <td class="up">20.80%</td>
+                <td>211,418,299 XRP</td>
+                <td>719,280</td>
+              </tr>
+          
+              <tr>
+                <td><img src="{% static 'website/assets/images/icons/crypto/svg/nxt.svg' %}" class="currency-icon img-fluid" alt="Nxt">Nxt</td>
+                <td>709.31 $</td>
+                <td class="down">-1.18%</td>
+                <td>125,361 DASH</td>
+                <td>427,132</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'website/assets/images/icons/crypto/svg/monero.svg' %}" class="currency-icon img-fluid" alt="Monero">Monero</td>
+                <td>78.97 $</td>
+                <td class="up">20.55% </td>
+                <td>2,281,288 LTC</td>
+                <td>719,280</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'website/assets/images/icons/crypto/svg/litecoin.svg' %}" class="currency-icon img-fluid" alt="Litecoin">Litecoin</td>
+                <td>156.32 $</td>
+                <td class="up">1.18%</td>
+                <td>255,226 XMR</td>
+                <td>218,887</td>
+              </tr>-->
+            </tbody>
+          </table>
+          </div>
+          <br/>
+          
+          <section class="bg-gray">
+            <div class="header text-light  header-h100  cover  bg-fixed" style="background-image:url({% static 'website/assets/images/headers/bitcoin.jpg' %})">
+              <div class="header-overlay-blue  header-h100   pt-5 pb-5 d-flex  justify-content-center align-items-center" style="">
+                <div class="container">
+                  <div class="row justify-content-center">
+                    <div class="col-12  col-md-6 text-center">
+                      <img alt="image" class="img-fluid ml-auto" width="60" src="{% static 'website/assets/images/icons/crypto/svg/centralized.svg' %}">
+                      <h1 class="display-3 mb-3">Live Market Pricing</h1>
+                      <p class="small text-light">Don't see your favorite crypto in our list? Try our Lookup feature!</p>
+                        <!--<div class="input-group mb-3">
+                <input type="search" class="form-control" placeholder="Lookup Crypto" aria-label="Search" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                <button class="btn btn-info bgd-gradient-blue btn-round" type="button">Lookup</button>-->
+                      <div class="form-group mb-3">
+                      <form class="d-flex" method="POST" id="formSearch" action="{% url 'prices' %}">
+                        {% csrf_token %}
+                        <input class="form-control" type="search" placeholder="Lookup Crypto" aria-label="Search" aria-describedby="basic-addon2" name="quote">
+                        <div class="input-group-append">
+                          <span><button name="btnform1" class="btn btn-info bgd-gradient-blue btn-round" id="buttonSearch" type="submit">Lookup</button></span>
+                        </div>
+                      </form>
+                      <p class="small text-light">Lookup multiple crypto symbols at once! Use commas as delimiters with no spaces.<br/>Enter the following format: BTC,XRP,ETH,etc.</p>
+                      </div>
+                    </div>
+                      <!--<p class="small text-light">Didn't see your favorite crypto in our list?<br/>Try our Lookup feature!</p>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--</div>-->
+          </section>
+              </div>
+
+                <!-- /.col -->
+              </div>
+              <!-- /.row -->
+          </div>
+	</section>
+  <!-- ***** End Area of Live Market Pricing ***** -->
+
+  <!-- ***** Start Area of Crypto Broadcast Desk ***** -->
+	<section id="videos" class="pt-5 bg-dark text-light">
+      <div class="container">
+        <!--<div class="row d-flex justify-content-center p-5">-->
+        <div class="row d-flex">
+          <div class="col-md-12">
+			       <h3 id="fa-check2" class="display-3 mb-2" style="color: #E66C2C;">Crypto Broadcast Desk</h3>
+             <h4 class="display-5" style="font-size: 160%;">Watch the latest in crypto news videos!</h4>
+          </div>
+	      
+          <!--<div class="col-md-12">
+            <div class="mt-2">-->
+
+            <!--<div class="container justify-content-center align-items-center" style="display: flex; height: 200px;">-->
+
+            <!-- ***** Start of First Row ***** -->
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 5px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/ucEfT1Wlaqo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 55px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/Xid2humavcg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 55px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/5AuR4PuK5H4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            <!-- ***** End of First Row ***** -->
+
+            <!-- ***** Start of Second Row ***** -->
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 5px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/R_clGzrQFEc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 55px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/iE_6kNPTcBk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 55px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/SZRe6g_WQEc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            <!-- ***** End of Second Row ***** -->
+
+            <!-- ***** Start of Third Row ***** -->
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 5px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/UDpYlOG9T64" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 55px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/bl3feAV7ddI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 55px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/qmiw0qdY0zo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            <!-- ***** End of Third Row ***** -->
+
+            <!-- ***** Start of Fourth Row ***** -->
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 5px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/C2K1qKFArTM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 55px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/nY3fIcB3HOY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 55px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/Gj-LAFHNjHU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            <!-- ***** End of Fourth Row ***** -->
+
+            <!-- ***** Start of Fifth Row ***** -->
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 5px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/EODhd0CcWxw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 55px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/EDNK4Kwi6Lk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 55px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/SnmquRxuCTU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            <!-- ***** End of Fifth Row ***** -->
+
+            <!-- ***** Start of Sixth Row ***** -->
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 5px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/cV4Dt-2pmOg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 55px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/nWYwlvLxoGA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 55px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/YC_ZJMBUk-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            <!-- ***** End of Sixth Row ***** -->
+
+            <!-- ***** Start of Seventh Row ***** -->
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 5px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/GZ3d9VHMARM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 55px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/Lqymt3uN9Bw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 55px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/jwwaum1p_90" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            <!-- ***** End of Seventh Row ***** -->
+
+            <!-- ***** Start of Eigth Row ***** -->
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 5px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/MYH7k8cbdFw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 55px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/VIwoCT97NIg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 55px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/FA6qxhc_RN4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            <!-- ***** End of Eigth Row ***** -->
+
+            <!-- ***** Start of Ninth Row ***** -->
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 5px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/qCSqadPVpSQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 55px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/BsEXTNS8RSA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 55px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/DD0awrB1zRg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            <!-- ***** End of Ninth Row ***** -->
+
+            <!-- ***** Start of Tenth Row ***** -->
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 5px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/ZeJ0_cG-OOM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div id="video" class="col s6 m6">
+                  <div data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 55px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/_T8esYmlbqY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s6 m6">
+                  <div id="video" data-aos="fade-right" data-aos-duration="2000" data-aos-once="false" class=" video-container"
+                    style="padding-top: 7%; padding-right: 7%; margin-left: 55px;">
+                    <iframe width="340" height="225" src="https://www.youtube.com/embed/b0_NTNeS0f0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            <!-- ***** End of Tenth Row ***** -->
+
+              
+            </div>
+
+          </div><br/><br/><br/><br/>
+        <!--</div>-->
+
+        <!-- /.row -->
+      <!--</div>-->
+      <!-- /.photos -->
+  </section>
+  <!-- ***** End Area of Crypto Broadcast Desk ***** -->
+	
+	<!-- ***** Start Area of Crypto Analyst Desk ***** -->
+  <section id="analysts" class="bg-dark text-light pt-5 pb-5">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <h3 id="fa-check2" class="display-3 mb-4" style="color: #E66C2C;">Crypto Analyst Desk</h3>
+            <h4 class="display-5" style="font-size: 160%;">Follow the world's top crypto analysts! Just click to follow and find out more.</h4>
+          </div>
+        </div>
+      </div>
+        
+	    <div class="container">
+        <div class="row text-center">
+          <div class="col">
+
+          </div>
+        </div>
+        <div class="row text-center mt-md-5">
+
+
+          <div class="col-md-4">
+            <a id="analyst_desk" href="https://anthonypompliano.com/"><img alt="image" class="img-fluid mb-4 rounded" src="{% static 'website/assets/images/team/anthony_pompliano.jpg' %}"></a>
+            <h3 id="front-page"><strong>Anthony Pompliano</strong></h3>
+            <p id="front-page2">Investor at Pomp Investments</p>
+            
+            <div class="mb-1 mt-2 mr-3 align-self-center pt-4 d-block">
+              <a href="https://twitter.com/APompliano" role="button" class="  p-2 m-2"><i id="front-page" class="fa fa-twitter fa-md text-primary" aria-hidden="true"></i></a>
+              <a href="https://www.facebook.com/PompGlobal" role="button" class="  p-2 m-2"><i id="front-page" class="fa fa-facebook fa-md  text-primary" aria-hidden="true"></i></a>
+              <a href="https://www.linkedin.com/in/anthonypompliano" role="button" class="  p-2 m-2"><i id="front-page" class="fa fa-linkedin fa-md  text-primary" aria-hidden="true"></i></a>
+              <a href="https://www.instagram.com/pompglobal" role="button" class="  p-2 m-2"><i id="front-page" class="fa fa-instagram fa-md  text-primary" aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <a id="analyst_desk" href="https://www.leadingtrader.com"><img alt="image" class="img-fluid mb-4 rounded" src="{% static 'website/assets/images/team/alessio_rastani.jpg' %}"></a>
+            <h3 id="front-page"><strong>Alessio Rastani</strong></h3>
+            <p id="front-page2">CEO, Leadingtrader</p>
+           
+            <div class="mb-1 mt-2 mr-3 align-self-center pt-4 d-block">
+              <a href="https://twitter.com/alessiorastani" role="button" class="  p-2 m-2"><i id="front-page" class="fa fa-twitter fa-md text-primary" aria-hidden="true"></i></a>
+              <a href="https://www.facebook.com/alessiorastani" role="button" class="  p-2 m-2"><i id="front-page" class="fa fa-facebook fa-md  text-primary" aria-hidden="true"></i></a>
+              <a href="https://www.linkedin.com/in/alessio-rastani-904a53176" role="button" class="  p-2 m-2"><i id="front-page" class="fa fa-linkedin fa-md  text-primary" aria-hidden="true"></i></a>
+              <a href="https://www.instagram.com/alessiorastani" role="button" class="  p-2 m-2"><i id="front-page" class="fa fa-instagram fa-md  text-primary" aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <a id="analyst_desk" href="https://tonevays.com/"><img alt="image" class="img-fluid mb-4 rounded" src="{% static 'website/assets/images/team/tone_vays.jpg' %}"></a>
+            <h3 id="front-page"><strong>Tone Vays</strong></h3>
+            <p id="front-page2">Bitcoin/Blockchain Researcher & Consultant</p>
+           
+            <div class="mb-1 mt-2 mr-3 align-self-center pt-4 d-block">
+              <a href="https://twitter.com/ToneVays" role="button" class="  p-2 m-2"><i id="front-page" class="fa fa-twitter fa-md text-primary" aria-hidden="true"></i></a>
+              <a href="https://www.facebook.com/ToneVays" role="button" class="  p-2 m-2"><i id="front-page" class="fa fa-facebook fa-md  text-primary" aria-hidden="true"></i></a>
+              <a href="https://www.linkedin.com/in/tonevays" role="button" class="  p-2 m-2"><i id="front-page" class="fa fa-linkedin fa-md  text-primary" aria-hidden="true"></i></a>
+              <a href="https://www.instagram.com/tonevays" role="button" class="  p-2 m-2"><i id="front-page" class="fa fa-instagram fa-md  text-primary" aria-hidden="true"></i></a>
+            </div><br/><br/><br/>
+          </div>
+
+          <div class="col-md-4">
+            <a id="analyst_desk" href="https://quantumeconomics.io/"><img alt="image" class="img-fluid mb-4 rounded" src="{% static 'website/assets/images/team/mati_greenspan.jpg' %}"></a>
+            <h3 id="front-page"><strong>Mati Greenspan</strong></h3>
+            <p id="front-page2">Founder, Quantum Economics</p>
+           
+            <div class="mb-1 mt-2 mr-3 align-self-center pt-4 d-block">
+              <a href="https://twitter.com/MatiGreenspan" role="button" class="  p-2 m-2"><i id="front-page" class="fa fa-twitter fa-md text-primary" aria-hidden="true"></i></a>
+              <a href="https://www.facebook.com/matisyahu.greenspan" role="button" class="  p-2 m-2"><i id="front-page" class="fa fa-facebook fa-md  text-primary" aria-hidden="true"></i></a>
+              <a href="https://www.linkedin.com/in/matisyahu" role="button" class="  p-2 m-2"><i id="front-page" class="fa fa-linkedin fa-md  text-primary" aria-hidden="true"></i></a>
+              <a href="https://www.instagram.com/matisyahu3/" role="button" class="  p-2 m-2"><i id="front-page" class="fa fa-instagram fa-md  text-primary" aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <a id="analyst_desk" href="https://nicholasmerten.com/"><img alt="image" class="img-fluid mb-4 rounded" src="{% static 'website/assets/images/team/nicholas_merten.jpg' %}"></a>
+            <h3 id="front-page"><strong>Nicholas Merten</strong></h3>
+            <p id="front-page2">CEO & Founder, Digifox & DataDash</p>
+           
+            <div class="mb-1 mt-2 mr-3 align-self-center pt-4 d-block">
+              <a href="https://twitter.com/NicholasMerten" role="button" class="  p-2 m-2"><i id="front-page" class="fa fa-twitter fa-md text-primary" aria-hidden="true"></i></a>
+              <a href="https://www.facebook.com/groups/datadashofficial" role="button" class="  p-2 m-2"><i id="front-page" class="fa fa-facebook fa-md  text-primary" aria-hidden="true"></i></a>
+              <a href="https://www.linkedin.com/in/NicholasMerten" role="button" class="  p-2 m-2"><i id="front-page" class="fa fa-linkedin fa-md  text-primary" aria-hidden="true"></i></a>
+              <a href="https://www.youtube.com/channel/UCCatR7nWbYrkVXdxXb4cGXw" role="button" class="  p-2 m-2"><i id="front-page" class="fa fa-youtube fa-md  text-primary" aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <a id="analyst_desk" href="https://programmingbitcoin.com/"><img alt="image" class="img-fluid mb-4 rounded" src="{% static 'website/assets/images/team/jimmy_song.jpeg' %}"></a>
+            <h3 id="front-page"><strong>Jimmy Song</strong></h3>
+            <p id="front-page2">Developer & Bitcoin Expert</p>
+           
+            <div class="mb-1 mt-2 mr-3 align-self-center pt-4 d-block">
+              <a href="https://twitter.com/jimmysong" role="button" class="  p-2 m-2"><i id="front-page" class="fa fa-twitter fa-md text-primary" aria-hidden="true"></i></a>
+              <a href="https://www.facebook.com/jimmy.song.98434" role="button" class="  p-2 m-2"><i id="front-page" class="fa fa-facebook fa-md  text-primary" aria-hidden="true"></i></a>
+              <a href="https://www.linkedin.com/in/jimmysong" role="button" class="  p-2 m-2"><i id="front-page" class="fa fa-linkedin fa-md  text-primary" aria-hidden="true"></i></a>
+              <a href="https://www.instagram.com/jimmysongbitcoin/" role="button" class="  p-2 m-2"><i id="front-page" class="fa fa-instagram fa-md  text-primary" aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div><br/><br/><br/><br/>
+    </section>
+  <!-- ***** End Area of Crypto Analyst Desk ***** -->
+
+  <!-- ***** Start Area of Crypto Research Desk ***** -->
+	<section id="research" class="bg-dark text-light pt-5 pb-5">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <h3 id="fa-check2" class="display-3 mb-4" style="color: #E66C2C;">Crypto Research Desk</h3>
+            <h4 class="display-5" style="font-size: 160%;">Discover the latest in crypto research. Click to read more!</h4>
+          </div>
+        </div>  
+      </div>
+
+	  <div class="container">
+        <div class="row text-center">
+          <div class="col">
+
+          </div>
+        </div>
+        <div class="row text-center mt-md-5">
+
+
+          <div class="col-md-4">
+            <div class="card text-light bg-dark">
+                                    <a href="https://research.arcane.no/report-archive/banking-on-bitcoin-the-state-of-bitcoin-as-collateral"><img data-src="{% static 'website/assets/images/headers/research_pic_1.jpg' %}" alt="100%x280" src="{% static 'website/assets/images/headers/research_pic_1.jpg' %}" data-holder-rendered="true" style="height: 280px; width: 100%; display: block;"></a>
+                                    <div class="card-body">
+                                      <a href="https://research.arcane.no/report-archive/banking-on-bitcoin-the-state-of-bitcoin-as-collateral" style="text-decoration: none;"><h4 id="fa-check3" class="card-title">Banking on Bitcoin: <br/>The State of Bitcoin as Collateral</h4></a>
+                                      <p class="card-text">Bitcoin's unique properties make it the perfect collateral asset. This report covers how bitcoin is used as collateral today through exclusive data. We describe the current market across lending, derivatives, and DeFi, including predictions on future adoption.</p>
+									    <p class="card-text"><a id="read-more" class="card-text" href="https://research.arcane.no/report-archive/banking-on-bitcoin-the-state-of-bitcoin-as-collateral" style="text-decoration: none;">[ Read more > ]</a></p>
+                                    </div>
+                                  </div>
+          </div>
+
+          <div class="col-md-4">
+           <div class="card text-light bg-dark">
+                                    <a href="https://research.arcane.no/report-archive/the-state-of-crypto-the-p2p-market" style="text-decoration: none;"><img data-src="{% static 'website/assets/images/headers/research_pic_3.jpg' %}" alt="100%x280" src="{% static 'website/assets/images/headers/research_pic_3.jpg' %}" data-holder-rendered="true" style="height: 280px; width: 100%; display: block;"></a>
+                                    <div class="card-body">
+                                      <a href="https://research.arcane.no/report-archive/the-state-of-crypto-the-p2p-market" style="text-decoration: none;"><h4 id="fa-check3" class="card-title">The State of Crypto: <br/>Trading Fees</h4><br/></a>
+                                      <p class="card-text">Exchanges enjoy a constant flow of revenue from trading fees and are indifferent to the price behavior of bitcoin. Investors and traders, on the other hand, bet on the price while seeking to minimize their fees, all else equal. As a result, there is a trade-off...</p>
+                                       <p class="card-text"><a id="read-more" class="card-text" href="https://research.arcane.no/report-archive/the-state-of-crypto-the-p2p-market" style="text-decoration: none;">[ Read more > ]</a></p>
+                                    </div>
+                                  </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card text-light bg-dark">
+                                    <a href="https://research.arcane.no/report-archive/the-state-of-crypto-the-p2p-market" style="text-decoration: none;"><img data-src="{% static 'website/assets/images/headers/research_pic_2.png' %}" alt="100%x280" src="{% static 'website/assets/images/headers/research_pic_2.png' %}" data-holder-rendered="true" style="height: 280px; width: 100%; display: block;"></a>
+                                    <div class="card-body">
+                                      <a href="https://research.arcane.no/report-archive/the-state-of-crypto-the-p2p-market" style="text-decoration: none;"><h4 id="fa-check3" class="card-title">The State of Crypto: <br/> The P2P Market</h4><br/></a>
+                                      <p class="card-text">P2P markets have been important to the adoption of bitcoin and crypto currencies all over the world. We now see strong growth in frontier markets, due to lower competition from centralized exchanges and their use in relation to remittances.</p>
+									    <p class="card-text"><a id="read-more" class="card-text" href="https://research.arcane.no/report-archive/the-state-of-crypto-the-p2p-market" style="text-decoration: none;">[ Read more > ]</a></p>
+                                    </div>
+                                  </div>
+          </div>
+
+          <div class="col-md-4">
+           <div class="card text-light bg-dark">
+                                     <a href="https://research.arcane.no/report-archive/h1-2020-review" style="text-decoration: none;"><img data-src="{% static 'website/assets/images/headers/research_pic_4.jpg' %}" alt="100%x280" src="{% static 'website/assets/images/headers/research_pic_4.jpg' %}" data-holder-rendered="true" style="height: 280px; width: 100%; display: block;"></a>
+                                    <div class="card-body">
+                                      <a href="https://research.arcane.no/report-archive/h1-2020-review" style="text-decoration: none;"><h4 id="fa-check3" class="card-title">H1 2020 Review</h4></a><br/><br/>
+                                      <p class="card-text">There has been a turbulent first half of 2020 in all financial markets due to COVID-19 induced uncertainty. Unemployment exploded, but the negative economic impact has been offset by large stimulus packages and QE from central banks, for now.</p>
+                                       <p class="card-text"><a id="read-more" class="card-text" href="https://research.arcane.no/report-archive/h1-2020-review" style="text-decoration: none;">[ Read more > ]</a></p>
+                                    </div>
+                                  </div>
+          </div>
+
+          <div class="col-md-4">
+           <div class="card text-light bg-dark">
+                                    <a href="https://research.arcane.no/report-archive/the-state-of-crypto-africa" style="text-decoration: none;"><img data-src="{% static 'website/assets/images/headers/research_pic_5.jpg' %}" alt="100%x280" src="{% static 'website/assets/images/headers/research_pic_5.jpg' %}" data-holder-rendered="true" style="height: 280px; width: 100%; display: block;"></a>
+                                    <div class="card-body">
+                                      <a href="https://research.arcane.no/report-archive/the-state-of-crypto-africa" style="text-decoration: none;"><h4 id="fa-check3" class="card-title">The State of Crypto: <br/>Africa</h4></a><br/>
+                                      <p class="card-text">Africa is one of, if not the most promising region for the adoption of cryptocurrencies. While the overall adoption is relatively low, the potential is enormous, the growth is rapid, and the development is likely to become defining...</p>
+                                       <p class="card-text"><a id="read-more" class="card-text" href="https://research.arcane.no/report-archive/the-state-of-crypto-africa" style="text-decoration: none;">[ Read more > ]</a></p>
+                                    </div>
+                                  </div>
+          </div>
+
+          <div class="col-md-4">
+           <div class="card text-light bg-dark">
+                                    <a href="https://research.arcane.no/report-archive/the-institutionalisation-of-bitcoin" style="text-decoration: none;"><img data-src="{% static 'website/assets/images/headers/research_pic_6.jpg' %}" alt="100%x280" src="{% static 'website/assets/images/headers/research_pic_6.jpg' %}" data-holder-rendered="true" style="height: 280px; width: 100%; display: block;"></a>
+                                    <div class="card-body">
+                                      <a href="https://research.arcane.no/report-archive/the-institutionalisation-of-bitcoin" style="text-decoration: none;"><h4 id="fa-check3" class="card-title">The Institutionalisation<br/>Of Bitcoin</h4></a><br/>
+                                      <p class="card-text">10 years ago, Satoshi Nakamoto published a paper about a peer-to-peer electronic cash system. A system that would make trusted third parties superfluous and remove the need for banks and financial institutions to facilitate economic transactions.</p>
+                                       <p class="card-text"><a id="read-more" class="card-text" href="https://research.arcane.no/report-archive/the-institutionalisation-of-bitcoin" style="text-decoration: none;">[ Read more > ]</a></p>
+                                    </div>
+                                  </div>
+          </div>
+
+
+        </div>  
+      </div><br/><br/><br/><br/>
+  </section>
+  <!-- ***** End Area of Crypto Research Desk ***** -->
+	
+	<!-- ***** Start Area of Contact Us Section ***** -->
+  <section id="contact" class="pb-5 pt-5 text-light bg-dark">
+      <div class="container">
+        <h2 class="display-3 text-center">Contact Us</h2>
+         
+        <div class="row">
+          <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
+            <div class="input-group input-lg mt-4">
+            <form action="{% url 'contact' %}" method="POST">
+             {% csrf_token %}
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+  						      <span class="input-group-text" id="basic-addon1"><i class="fa fa-user-circle"></i></span>
+                  </div>
+                  <input id="contact2" type="text" name="message-name" class="form-control" placeholder="Your Name" aria-label="Your Name" aria-describedby="basic-addon1" required>
+              </div>
+
+              <div class="input-group input-lg mt-4">
+                  <div class="input-group-prepend">
+  						      <span class="input-group-text" id="basic-addon2"><i class="fa fa-envelope"></i></span>
+                  </div>
+                  <input id="contact2" type="text" name="message-email" class="form-control" id="basic-url" placeholder="Your Email" aria-describedby="basic-addon2" required>
+            
+              </div>
+              
+              <div class="textarea-container mt-4">
+                <textarea id="contact2" class="form-control" name="message" rows="4" cols="80" placeholder="Type a message..." style="margin-top: 0px; margin-bottom: 0px; height: 214px;" required></textarea>
+              </div>
+            
+              <div class="send-button mt-5">
+                <button name="btnform2" type="submit" class="btn btn-info bgd-gradient-blue btn-round btn-block  btn-lg mt-3">Send Message</button>
+              </div>
+            </form>
+            </div>  
+          </div>
+        </div>
+
+      </div>
+
+  </section>
+  <!-- ***** End Area of Contact Us Section ***** -->
+	
+	<!-- ***** Start Area of Subscribe Section ***** -->
+  <section id="subscribe" class="bg-gray">
+      <div class="header text-light  header-h100  cover  bg-fixed" style="background-image:url({% static 'website/assets/images/headers/bitcoin.jpg' %} )">
+        <div class="header-overlay-blue  header-h100   pt-5 pb-5 d-flex  justify-content-center align-items-center" style="">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12  col-md-6 text-center">
+              <form action="{% url 'subscribe' %}" method="POST">
+              {% csrf_token %}
+                <img alt="image" class="img-fluid ml-auto" width="60" src="{% static 'website/assets/images/icons/crypto/svg/centralized.svg' %}">
+                <h1 class="display-3 mb-3">Always be in the know!</h1>
+                  <div class="input-group mb-3">
+                    <input name="message-email" type="text" class="form-control" placeholder="Enter Your Email" aria-label="Enter Your Email" aria-describedby="basic-addon2" required>
+        				    <div class="input-group-append">
+        					     <button type="submit" class="btn btn-info bgd-gradient-blue btn-round">Subscribe</button>
+        				    </div>
+				          </div>
+                <p class="small text-light">Your contact info is safe with us.<br>We never share subscriber data with third parties.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- ***** End Area of Subscribe Section ***** -->
+	
+  <!-- ***** Start Area of Footer ***** -->
+  <section class="mb-0 mt-0">
+      <div class="footer text-light">
+        <div class="bg-dark pt-5 pb-5">
+          <div class="container">
+            <div class="row f-flex justify-content-between" style="justify-content: space-between;">
+              <div class="col-md-8 text-xs-center  text-left text-secondary my-1">
+                <p class="mt-2  text-light"> © Copyright 2021 • All Rights Reserved | Website built by Front-End Vision & Designs, LLC<br/><a id="front-page" class=" " href="{% url 'terms' %}" style="text-decoration: none;">Terms & Conditions</a> | <a id="front-page" class=" " href="#contact" style="text-decoration: none;">Contact</a> | <a id="front-page" class=" " href="#learn" style="text-decoration: none;">Learn</a> | <a id="front-page" class=" " href="#news" style="text-decoration: none;">News</a> | <a id="front-page" class=" " href="#live-prices" style="text-decoration: none;">Live Prices</a> | <a id="front-page" class=" " href="#videos" style="text-decoration: none;">Videos</a> | <a id="front-page" class=" " href="#analysts" style="text-decoration: none;">Analysts</a> | <a id="front-page" class=" " href="#research" style="text-decoration: none;">Research</a></p>
+              </div>
+              <div class="col-md-4 text-xs-center   text-lg-right text-secondary my-1">
+                <div class="btn-container  mt-1 text-md-right text-sm-center">
+                  <div class="mb-1 mr-3 align-self-right pt-0 d-inline-block">
+                    <a href="https://twitter.com/CryptoNewsNtwk" role="button" class="text-light p-2 m-2 btn btn-round btn-rised btn-icon btn-info bgd-gradient-blue"><i class="fa fa-twitter fa-lg color-light" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/Crypto-News-Network-107942398069141" role="button" class="text-light p-2 m-2 btn btn-round btn-rised btn-icon btn-info bgd-gradient-blue"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/cryptonewsnetwork/" role="button" class="text-light p-2 m-2 btn btn-round btn-rised btn-icon btn-info bgd-gradient-blue"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/webmaster.cryptonewsnetwork/" role="button" class="text-light p-2 m-2 btn btn-rised btn-round btn-icon btn-info bgd-gradient-blue"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a id="back2Top" title="Back to top" href="#">&#10148;</a>
+  </section>
+
+  <!-- ***** End Area of Footer ***** -->
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <!-- jQuery is required -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <script>
+	$('document').ready( function(){
+		setTimeout(function(){ 
+			$('body').removeClass('loader-in');
+			$('#loader-bitcoin').remove();
+		}, 1000);
+			
+	})
+  </script>
+  
+  <script>
+		
+particlesJS("particles-js", {
+    "particles": {
+		"number": {
+			"value": 80,
+			"density": {
+				"enable": true,
+				"value_area": 800
+			}
+		},
+		"color": {
+			"value": "#ffffff"
+		},
+		"shape": {
+			"type": "circle",
+			"stroke": {
+				"width": 0,
+				"color": "#000000"
+			},
+			"polygon": {
+				"nb_sides": 5
+			},
+			"image": {
+				"src": "img/github.svg",
+				"width": 100,
+				"height": 100
+			}
+		},
+		"opacity": {
+			"value": 0.5,
+			"random": false,
+			"anim": {
+				"enable": false,
+				"speed": 1,
+				"opacity_min": 0.1,
+				"sync": false
+			}
+		},
+		"size": {
+			"value": 6,
+			"random": true,
+			"anim": {
+				"enable": false,
+				"speed": 20,
+				"size_min": 0.1,
+				"sync": false
+			}
+		},
+		"line_linked": {
+			"enable": true,
+			"distance": 150,
+			"color": "#ffffff",
+			"opacity": 0.4,
+			"width": 1
+		},
+		"move": {
+			"enable": true,
+			"speed": 6,
+			"direction": "none",
+			"random": false,
+			"straight": false,
+			"out_mode": "out",
+			"bounce": false,
+			"attract": {
+				"enable": false,
+				"rotateX": 600,
+				"rotateY": 1200
+			}
+		}
+	},
+	"interactivity": {
+		"detect_on": "canvas",
+		"events": {
+			"onhover": {
+				"enable": true,
+				"mode": "grab"
+			},
+			"onclick": {
+				"enable": true,
+				"mode": "push"
+			},
+			"resize": true
+		},
+		"modes": {
+			"grab": {
+				"distance": 140,
+				"line_linked": {
+					"opacity": 1
+				}
+			},
+			"bubble": {
+				"distance": 400,
+				"size": 40,
+				"duration": 2,
+				"opacity": 8,
+				"speed": 3
+			},
+			"repulse": {
+				"distance": 200,
+				"duration": 0.4
+			},
+			"push": {
+				"particles_nb": 4
+			},
+			"remove": {
+				"particles_nb": 2
+			}
+		}
+	},
+	"retina_detect": true
+});
+  </script>
+  
+  <script>
+		$(document).ready(function () {
+		
+		$(window).scroll(function() {
+			if ($("nav").offset().top > 50) {
+				$("nav").addClass("bgd-gradient-blue ");
+				$("nav").removeClass("bg-transparent");
+			} else {
+				$("nav").removeClass("bgd-gradient-blue");
+				$("nav").addClass("bg-transparent");
+			}
+		});
+
+				$(document).on("scroll", onScroll);
+				
+				//smoothscroll
+				$('nav ul li a[href^="#"], .scroll').on('click', function (e) {
+					e.preventDefault();
+					$(document).off("scroll");
+					
+					$('nav ul li a').each(function () {
+						$(this).removeClass('active');
+					})
+					$(this).addClass('active');
+				  
+					var target = this.hash,
+						menu = target;
+					$target = $(target);
+					$('html, body').stop().animate({
+						'scrollTop': $target.offset().top+2
+					}, 500, 'swing', function () {
+						window.location.hash = target;
+						$(document).on("scroll", onScroll);
+					});
+				});
+			});
+
+			function onScroll(event){
+				var scrollPos = $(document).scrollTop();
+				$('nav ul li a, .scroll').each(function () {
+					var currLink = $(this);
+					var refElement = $(currLink.attr("href"));
+					if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+						$('nav ul li a').removeClass("active");
+						currLink.addClass("active");
+					}
+					else{
+						currLink.removeClass("active");
+					}
+				});
+			}
+  </script>
+
+  <script>
+    /*Scroll to top when arrow up clicked BEGIN*/
+    $(window).scroll(function() {
+        var height = $(window).scrollTop();
+        if (height > 100) {
+            $('#back2Top').fadeIn();
+        } else {
+            $('#back2Top').fadeOut();
+        }
+    });
+    $(document).ready(function() {
+        $("#back2Top").click(function(event) {
+            event.preventDefault();
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+            return false;
+        });
+
+    });
+     /*Scroll to top when arrow up clicked END*/
+  </script>
+
+</body>
+
+</html>

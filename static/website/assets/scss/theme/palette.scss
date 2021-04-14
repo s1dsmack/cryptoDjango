@@ -1,0 +1,45 @@
+/////   Bootstrap variables  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Bootstrap variables rewriting to custom color palette
+//in HEX format only!
+
+$blue:            #1195c6;
+$indigo:          #604c8d;
+$purple:          #c51555;
+$pink:            #e83e8c;
+$red:             #eb3a26;
+$orange:          #f2672e;
+$yellow:          #ffdc04;
+$green:           #32b140;
+$teal:            #1ca28a;
+$cyan:            #17a2b8;
+$white:           #f9f9f9;
+$secondary:       #6a626d;
+$dark:            #101920;
+
+
+//    Create custom theme                          //////////////////////////////////////////////////////////////////////////////////////////////
+
+//   ||  ++++++++  Change variable or color (in HEX format only) 
+// Example ->   $primary: $blue;    - or ->  $primary: #20c997; 
+
+
+
+$primary:           $teal; //primary color	
+
+//* secondary theme colors    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+$success:	        $green;
+$info:		        $blue;
+
+//Default theme 
+
+
+$body-bg:         	$white;
+$body-color:      	#2b2b2b;
+$info-color:      	$white;
+$warning-color:   	$body-color;
+$white-color: 	  	$white;
+
+
+/* transparent helper variable */
+$transparent-bg:  transparent;

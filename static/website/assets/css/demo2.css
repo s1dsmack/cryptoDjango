@@ -1,0 +1,164 @@
+div#toolbar {
+    position: fixed;
+    z-index: 10000;
+    top: 55px;
+    px;
+    right: -220px;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    width: 254px;
+}
+
+.card{
+	margin-bottom:30px;
+}
+.price-demo hr{
+	margin-top: 100px;
+}
+	
+div#toolbar.active {
+   	right: -14px;
+}
+
+#demo-colors .card{
+  overflow:hidden;
+}
+#demo-colors .card > [class*="bg-gradient"]{
+  width:100% !important;
+  border-radius: 0 !important;
+  margin-top:0 !important;
+}
+#extra-styles  .card> [class*="bgd-gradient"]{
+  width:100% !important;
+  border-radius: 0 !important;
+  margin-top:0 !important;
+}
+
+#extra-styles  .card> [class*="bg-gradient"]{
+  width:100% !important;
+  border-radius: 0 !important;
+  margin-top:0 !important;
+}
+
+
+/* header *************************************************************/
+#visuals-imac{
+  position: absolute;
+  left:0;
+  z-index:1;
+}
+#visuals-ipad{
+  position: absolute;
+  left:0;
+  z-index:2;
+}
+#visuals-iphone{
+  position: absolute;
+  left:0;
+  top:-50px;
+  z-index:3;
+}
+.relax-top-el-1{
+  position: absolute;
+  left:70px;
+  bottom:-170px;
+}
+.relax-top-el-2{
+  position: absolute;
+  right:-70px;
+  bottom:-250px;
+}
+.relax-top-el-3{
+  position: absolute;
+  left:-150px;
+  bottom:-150px;
+  filter: blur(3px);
+  z-index:-1;
+}
+
+.relax-top-el-4{
+  position: absolute;
+  right:-150px;
+  bottom:-250px;
+  filter: blur(3px);
+  z-index:-1;
+}
+
+.rotator-1{
+    transform: rotate(-17deg);
+    display: block;
+}
+.rotator-2{
+    transform: rotate(30deg);
+    display: block;
+}
+
+.dark {
+    background: #0a2d2f url(../images/headers/topo-map-bg-2.png);
+    background-size: 500px 500px;
+    min-height: 90vh;
+}
+
+.dark hr {
+	border-top: 1px solid rgba(211, 211, 210, 0.21);
+	}
+	
+.price-demo .btn-lg{
+	font-size:20px;
+}
+
+.grid-item-content {
+	border-radius:10px;
+	overflow:hidden;
+	
+	}
+.grid-item-1{
+	position: absolute !important;
+	top: -30px;
+	left:100px;
+
+}
+.grid-item-2{
+	position: absolute !important;
+	top: 200px;
+	right: 30px;
+ 
+}
+
+.grid-item-3{
+	position: absolute !important;
+	top:  170px;
+	right:-100px;
+ 
+}
+
+.grid-item-4{
+	position: absolute !important;
+	top: 520px;
+	right: -20px;
+ 
+}
+
+.grid-item-5{
+	position: absolute !important;
+	top: -50px;
+	right:100px;
+ 
+}
+
+.grid-item-6{
+	position: absolute !important;
+	top: 200px;
+	right:120px;
+	 
+}
+
+.grid-item-10{
+	position: absolute !important;
+    top: 50px;
+    left:-50px;
+}
+
+
+

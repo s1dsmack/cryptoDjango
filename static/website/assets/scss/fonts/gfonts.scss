@@ -1,0 +1,8 @@
+@include google-font {   // <= combine
+    @include google-font(Roboto, 100 300 400 700, normal);
+    @include google-font(Montserrat, 100 300 400 700, normal);
+    //@include google-font(Open Sans, 300 400 700, italic normal);
+    //@include google-font(Lato, 300 400i 700i);
+    //@include google-font(Lato, 300 700, italic normal);
+    //@include google-font(Slapo 27px, 400 200, $text: 'Lorem ipsum dolor sit amet');
+}

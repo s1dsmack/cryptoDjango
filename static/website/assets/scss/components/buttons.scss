@@ -1,0 +1,13 @@
+// For each of Bootstrap's buttons, define padding, shadow.
+
+$border-radius-rounded:        100px;
+$input-btn-padding-y:          .5rem;
+$input-btn-padding-x:          1rem;
+$input-btn-padding-y-sm:       .2rem ;
+$input-btn-padding-x-sm:       .7rem ;
+$input-btn-padding-y-lg:       1.2rem ;
+$input-btn-padding-x-lg:       2.8125rem;
+$btn-box-shadow:               $mdl-shadow--4dp;
+$btn-active-box-shadow:        $mdl-shadow--8dp;
+$btn-rised-box-shadow:         0 1.5em 85px 0 rgba(0,0,0,.2);
+$btn-transition:               background-color .15s ease-in-out, border-color .15s ease-in-out, color .15s ease-in-out, box-shadow .15s $transition-base !default;

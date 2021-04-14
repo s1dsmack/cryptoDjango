@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="64px" height="64px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+<style type="text/css">
+<![CDATA[
+	.st0{fill:#EFE6FF;}
+	.st1{fill:url(#SVGID_1_);}
+]]>
+</style>
+<g id="wallet">
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="17.3457" y1="6.1841" x2="46.6547" y2="35.4931">
+		<stop  offset="0" style="stop-color:#E68CBC"/>
+		<stop  offset="1" style="stop-color:#8366B3"/>
+	</linearGradient>
+	<path class="st1" d="M57.084,25.063C50.04,19.219,41.132,16,32,16s-18.041,3.218-25.084,9.063l-3.831-4.618
+		C11.203,13.709,21.472,10,32,10c10.527,0,20.797,3.709,28.916,10.446L57.084,25.063z"/>
+	<path class="st0" d="M32,44c-3.313,0-6,2.688-6,6s2.687,6,6,6c3.312,0,6-2.688,6-6S35.312,44,32,44z M25,31.876
+		c-3.313,0-6,2.688-6,6s2.687,6,6,6c3.312,0,6-2.688,6-6S28.312,31.876,25,31.876z M39,31.876c-3.313,0-6,2.688-6,6s2.687,6,6,6
+		c3.312,0,6-2.688,6-6S42.312,31.876,39,31.876z M46,44c-3.313,0-6,2.688-6,6s2.687,6,6,6c3.312,0,6-2.688,6-6S49.312,44,46,44z
+		 M18,44c-3.313,0-6,2.688-6,6s2.687,6,6,6c3.312,0,6-2.688,6-6S21.312,44,18,44z M32,19.751c-3.313,0-6,2.688-6,6s2.687,6,6,6
+		c3.312,0,6-2.688,6-6S35.312,19.751,32,19.751z"/>
+</g>
+</svg>

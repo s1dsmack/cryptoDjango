@@ -1,0 +1,457 @@
+{% load static %}
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="{% static 'website/assets/images/logos/crypto_favicon.ico' %}">
+  <!-- Bootstrap core CSS + Orange theme -->
+  <link rel="stylesheet" href="{% static 'website/assets/css/theme/style.css' %}">
+  <link rel="stylesheet" href="{% static 'website/assets/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'website/assets/css/templates/crypto/style-crypto.css' %}">
+	
+
+
+<title>Crypto News Network</title>
+
+
+  <!-- Custom styles for this template -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+<script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+
+  <style>
+
+    .jumbotron {
+      position: relative;
+      background: none;
+    }
+
+    .jumbotron-bg {
+      opacity: 0.6;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+    }   
+
+    .cover-container {
+      position: relative;
+      z-index:2;
+    }
+
+    #p-margin {
+      width: 100%;
+      display: inline-block;
+    }
+
+    #p-text-color {
+      color: #E66C2C !important; /* Color is dark oranges */
+    }
+
+    #p-text-color2 {
+      color: #FFE81F !important; /* Color is StarWars Banana Yellow */
+    }
+
+    #p-text-color3 {
+      color: #1E90FF; /* Color is StarWars blue */
+    }
+
+    #p-text-color:hover {
+      color: gold !important; /* mouse over link is gold */ 
+    }
+
+    .nav-link:hover {
+      color: gold !important; /* mouse over link is gold */
+    }
+
+    .navbar-brand:hover {
+      color: gold !important; /* mouse over link is gold */
+    }
+
+    .fa:hover {
+      color: #20B2AA !important; /* mouse over link is lightseagreen */ 
+    }
+
+    #footer:hover {
+      color: gold !important; /* mouse over link is gold */ 
+    }
+
+  </style>
+
+</head>
+
+<body class="loader-in">
+<!--<div id="loader-bitcoin" class="justify-content-center d-flex flex-wrap">
+	<div id="bitcoin">
+	  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+		 width="200px" height="200px" viewBox="100 100 400 400" xml:space="preserve">
+		<filter id="dropshadow" height="130%">
+	  <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+	  <feOffset dx="0" dy="0" result="offsetblur"/>
+	  <feFlood flood-color="red"/>
+	<feComposite in2="offsetblur" operator="in"/>
+	<feMerge>
+	<feMergeNode/>
+	<feMergeNode in="SourceGraphic"/>
+	</feMerge>
+	</filter>          
+	<path class="path" style="filter:url(#dropshadow)" fill="#000000" d="M446.089,261.45c6.135-41.001-25.084-63.033-67.769-77.735l13.844-55.532l-33.801-8.424l-13.48,54.068
+		c-8.896-2.217-18.015-4.304-27.091-6.371l13.568-54.429l-33.776-8.424l-13.861,55.521c-7.354-1.676-14.575-3.328-21.587-5.073
+		l0.034-0.171l-46.617-11.64l-8.993,36.102c0,0,25.08,5.746,24.549,6.105c13.689,3.42,16.159,12.478,15.75,19.658L208.93,357.23
+		c-1.675,4.158-5.925,10.401-15.494,8.031c0.338,0.485-24.579-6.134-24.579-6.134l-9.631,40.468l36.843,9.188
+		c8.178,2.051,16.209,4.19,24.098,6.217l-13.978,56.17l33.764,8.424l13.852-55.571c9.235,2.499,18.186,4.813,26.948,6.995
+		l-13.802,55.309l33.801,8.424l13.994-56.061c57.648,10.902,100.998,6.502,119.237-45.627c14.705-41.979-0.731-66.193-31.06-81.984
+		C425.008,305.984,441.655,291.455,446.089,261.45z M368.859,369.754c-10.455,41.983-81.128,19.285-104.052,13.589l18.562-74.404
+		C306.28,314.65,379.774,325.975,368.859,369.754z M379.302,260.846c-9.527,38.187-68.358,18.781-87.442,14.023l16.828-67.489
+		C327.767,212.14,389.234,221.02,379.302,260.846z"/>
+			  
+	</svg>
+	</div>
+</div>
+
+  <div class="site-wrapper p-0 cover" style="background-image: url({% static 'website/assets/images/photos/backgroundpic_bitcoin_1c.jpg' %})">
+	
+    <div class="site-wrapper-inner header-overlay-blue	 cover">-->
+	<!-- particlesjs component -->
+		<div id="particles-js"></div>
+      <div class="cover-container relative">
+
+       <header class="">
+	   
+         <nav class="fixed-top  navbar text-white  navbar-expand-md  navbar-dark bg-transparent mb-5">
+			<div class="container">
+                    <a class="navbar-brand" href="{% url 'home' %}"> <img src="{% static 'website/assets/images/icons/crypto/svg/block_chain.svg' %}" class="currency-icon img-fluid" alt="CryptoDesk"> Crypto News Network</a>
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="navbar-collapse collapse" id="navbarsExampleDefault">
+                      <ul class="navbar-nav mr-auto"> 
+                        <li class="nav-item">
+                          <a class="nav-link" href="{% url 'home' %}#learn">Learn</a>
+                        </li>
+						            <li class="nav-item">
+                          <a class="nav-link" href="{% url 'home' %}#news">News</a>
+                        </li>
+						            <li class="nav-item">
+                          <a class="nav-link" href="{% url 'home' %}#live-prices">Live Prices</a>
+                        </li>
+						            <li class="nav-item">
+                          <a class="nav-link" href="{% url 'home' %}#videos">Videos</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="{% url 'home' %}#analysts">Analysts</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="{% url 'home' %}#research">Research</a>
+                        </li> 
+						            <li class="nav-item">
+                          <a class="nav-link" href="{% url 'home' %}#contact">Contact</a>
+                        </li>
+                      </ul>
+
+                      <div class="mb-0 mt-0 mr-0 align-self-right pt-0 d-inline-block">
+                        <a href="https://twitter.com/CryptoNewsNtwk" role="button" class="  p-2 m-2"><i class="fa fa-twitter  text-light " aria-hidden="true"></i></a>
+                        <a href="https://www.facebook.com/Crypto-News-Network-107942398069141" role="button" class="  p-2 m-2"><i class="fa fa-facebook  text-light " aria-hidden="true"></i></a>
+                        <a href="https://www.linkedin.com/in/cryptonewsnetwork/" role="button" class="  p-2 m-2"><i class="fa fa-linkedin  text-light " aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/webmaster.cryptonewsnetwork/" role="button" class="  p-2 m-2"><i class="fa fa-instagram  text-light " aria-hidden="true"></i></a>
+                      </div>
+                    </div>
+					</div>
+                  </nav>
+				
+        </header>
+
+        <!--<main id="top" role="main" class="inner ">
+    		  <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-12  ">
+              <h1 class="cover-heading display-1 mt-5 pt-5 mb-2" style="color: #E66C2C;">Want To Buy Bitcoin?</h1>
+              <h3 class="display-5" style="font-size: 160%;"><i><b>Check us out! We've got the latest in blockchain news and research!</b></i></h3>
+              <p class="lead">
+                <a href="{% url 'home' %}#learn" class="btn  scroll bgd-gradient-blue btn-lg  mt-3 mb-3 mr-2 ml-0 btn-round btn-rised">Learn more</a>
+                <a href="{% url 'home' %}#subscribe" class="btn  scroll bgd-gradient-orange btn-lg  mt-3 mb-3 mr-2 ml-0 btn-round btn-rised">Subscribe</a>
+              </p>
+    		      </div>
+            </div>
+          </div>
+        </main>-->
+
+      
+
+      </div>
+		
+    </div>
+
+  </div>
+          
+        <section class="bg-gray">
+          <div class="header text-light  header-h100  cover  bg-fixed" style="background-image:url({% static 'website/assets/images/photos/backgroundpic_bitcoin_4c.jpeg' %})">
+            <div class="header-overlay-dark  header-h100   pt-5 pb-5 d-flex  justify-content-center align-items-center" style="">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div id="p-margin" class="col-12  col-md-6 text-center">
+                    <h1 id="p-text-color" class="display-2 mb-3">Terms & Conditions</h1><br/>
+                    <p style="text-align: justify;">We reserve the right at any time for the following:<br/><br/>
+                      Any changes we make to the Terms of Understanding (ToU) will be effective immediately after we post the modified ToU on CryptoCurrencyNews.com.<br/><br/>
+                      All of the information and other content displayed on, transmitted through, or used in connection with the CryptoCurrencyNews Sites, including for example, advertising, directories, guides, articles, opinions, reviews, text, photographs, images, illustrations, audio clips, video, html, source and object code, software, data, the selection and arrangement of the aforementioned and the “look and feel” of the CryptoCurrencyNews Sites (collectively, the “Content”), are protected under applicable copyrights and other proprietary (including but not limited to intellectual property) rights and are the intellectual property of CryptoCurrencyNews, and its affiliated companies, licensors and suppliers. CryptoCurrencyNews actively protects its rights to the Content to the fullest extent of the law.<br/><br/>
+                      You may use the Content online and solely for your personal, non-commercial use, and you may download or print a single copy of any portion of the Content for your personal, non-commercial use, provided you do not remove any trademark, copyright or other notice contained in such Content. You may not, for example, republish the Content on any Internet, Intranet or Extranet site or incorporate the Content in any database, compilation, archive or cache or store the Content in electronic form on your computer or mobile device unless otherwise expressly permitted byCryptoCurrencyNews. You may not distribute any of the Content to others, whether or not for payment or other consideration, and you may not modify, copy, frame, reproduce, sell, publish, transmit, display or otherwise use any portion of the Content, except as permitted by the ToU or by securing the prior written consent of CryptoCurrencyNews.<br/><br/>
+                      The Content includes logotypes, trademarks and service marks (collectively “Marks”) owned by CryptoCurrencyNews, and Marks owned by other information providers and third parties. For example, “CryptoCurrencyNews” is a registered trademark of CryptoCurrencyNews, Inc. No Marks may be used in any manner unless approved in advance, in writing by CryptoCurrencyNews.<br/><br/>
+                      Requests to use the Content for any purpose other than as permitted in the ToU should be submitted to webmaster@CryptoCurrencyNews.com.<br/><br/>
+                      CryptoCurrencyNews respects the intellectual property of others. If you believe that your work has been copied in a way that constitutes copyright infringement or are aware of any infringing material placed by any third party on the Website, please contact our designated copyright agent, in writing, either by email at copyrightagent@CryptoCurrencyNews.com or by First Class mail at CryptoCurrencyNews, Inc., 636 Avenue of the Americas, 3rd Floor, New York City, NY 10011, Attn: Copyright Agent, and provide the following information as required by the Online Copyright Infringement Liability Limitation Act of the Digital Millennium Copyright Act, 17 U.S.C. Section 512(c)(3):<br/><br/>
+                      The information, products and services on the CryptoCurrencyNews Sites are provided on a strictly “as is,” “where is” and “where available” basis. CryptoCurrencyNews does not provide any warranties (either express or implied) with respect to the information provided on any CryptoCurrencyNews site and/or your use of any of the CryptoCurrencyNews Sites generally or for any particular purpose. CryptoCurrencyNews expressly disclaims any implied warranties, including but not limited to, warranties of title, non-infringement, merchantability or fitness for a particular purpose. CryptoCurrencyNews will not be responsible for any loss or damage that could result from interception by third parties of any information made available to you via the CryptoCurrencyNews Sites or any of them. Although the information provided to you on this website is obtained or compiled from sources we believe to be reliable, CryptoCurrencyNews cannot and does not guarantee the accuracy, validity, timeliness, or completeness of any information or data made available to you for any particular purpose. Neither CryptoCurrencyNews, nor any of its affiliates, directors, officers or employees, nor any third party providers of content, software and/or technology (collectively, the “CryptoCurrencyNews parties”), will be liable or have any responsibility of any kind for any loss or damage that you incur in the event of any failure or interruption of any CryptoCurrencyNews site, or resulting from the act or omission of any other party involved in making any CryptoCurrencyNews site, the data contained therein or the products or services offered thereby available to you, or from any other cause relating to your access to, inability to access, or use of any CryptoCurrencyNews site or the materials contained therein, whether or not the circumstances giving rise to such cause may have been within the control of CryptoCurrencyNews or of any vendor providing software or services.<br/><br/>
+                      In no event will CryptoCurrencyNews or any of the CryptoCurrencyNews parties be liable to you, whether in contract or tort, for any direct, special, indirect, consequential or incidental damages or any other damages of any kind even if CryptoCurrencyNews or any other such party has been advised of the possibility thereof. This limitation on liability includes, but is not limited to, the transmission of any viruses which may infect a user’s equipment, failure of mechanical or electronic equipment or communication lines, telephone or other interconnect problems (e.g., you cannot access your internet service provider), unauthorized access, theft, operator errors, strikes or other labor problems or any force majeure. CryptoCurrencyNews cannot and does not guarantee continuous, uninterrupted or secure access to any of the CryptoCurrencyNews Sites.<br/><br/>
+                      All writers’ opinions are their own and do not constitute financial advice in any way whatsoever. Nothing published by CryptoCurrencyNews constitutes an investment recommendation, nor should any data or Content published by CryptoCurrencyNews be relied upon for any investment activities.<br/><br/>
+                      CryptoCurrencyNews strongly recommends that you perform your own independent research and/or speak with a qualified investment professional before making any financial decisions.<br/><br/>
+                      Certain links, including hypertext links, in our site will take you to external websites. These are provided for your convenience and inclusion of any link does not imply endorsement or approval by CryptoCurrencyNews of the linked site, its operator or its content. Each of those websites have their own “Terms and Conditions.” We are not responsible for the content of any website outside of the CryptoCurrencyNews Sites. We do not monitor and assume no duty to monitor the content of any such third-party websites.<br/><br/>
+                      Cookies are small text files that are placed on your computer by websites that you visit. They are widely used in order to make websites work, or work more efficiently, as well as to provide information to the owners of the site.<br/><br/>
+                      These cookies are used to collect information about how visitors use our site. We use the information to compile reports and to help us improve the site. The cookies collect information in an anonymous form, including the number of visitors to the site, where visitors have come to the site from and the pages they visited.<br/><br/>
+                      By using our website, you agree that we can place these types of cookies on your device.<br/><br/>
+                      The ToU and the agreement formed hereby (“Agreement”) shall be governed by, and construed and enforced in accordance with, the laws of the State of New York, without regard to conflicts of laws provisions. Unless otherwise agreed in writing by you and us, any dispute arising out of or relating to the Agreement, or the breach hereof, shall be finally resolved by arbitration administered by the American Arbitration Association under its Commercial Arbitration Rules, or such arbitration body as required by law, rule or regulation, and judgment upon the award rendered by the arbitrator may be entered in any court having jurisdiction. The arbitration will be conducted in the English language before a single arbitrator in the City of New York, New York. Such arbitration must be commenced within one (1) year after the claim or cause of action arises. If for any reason any provision of this Agreement, or a portion thereof, shall be unenforceable, that provision shall be enforced to the maximum extent permissible so as to effect the intent of this Agreement, and the remainder of this Agreement shall continue in full force and effect. This Agreement constitutes the entire agreement between us and you with respect to the CryptoCurrencyNews Sites and it supersedes all prior or contemporaneous communications, agreements and understandings between us and you with respect to the subject matter hereof. A printed version of this Agreement shall be admissible in judicial or administrative proceedings.<br/><br/>
+                      <a id="p-text-color" href="mailto:webmaster@CryptoCurrencyNews.com? subject=ToU text">webmaster@CryptoCurrencyNews.com</a></p>
+                      <p style="text-align: justify;">Any rights not expressly granted herein are reserved.<br/>
+                      © 2021 CryptoCurrencyNews, Inc.</p>
+                      <p style="text-align: justify;">Updated on July 6, 2020</p>
+                  </div>
+                </div>
+              </div>
+                  
+                  
+              <!--<div class="jumbotron" align="left">
+                <div class="jumbotron-bg"></div>
+                <div class="cover-container"></div>
+                  <h1 class="display-1" style="color: #E66C2C;">{{ key }}</h1> 
+                  <hr class="my-2" style="color:#E66C2C;">
+                  <strong>Name</strong>: {{ key }}<br/><br/>
+                      <strong>Price</strong>: {{ value.USD.PRICE }}<br/><br/>
+                      <strong>Day High</strong>: {{ value.USD.HIGHDAY }}<br/><br/>
+                      <strong>Day Low</strong>: {{ value.USD.LOWDAY }}<br/><br/>
+                      <strong>Market Cap</strong>: {{ value.USD.MKTCAP }}<br/><br/>
+                      <strong>Day Volume</strong>: {{ value.USD.VOLUMEDAY }}<br/><br/>
+                      <strong>Day Volume To</strong>: {{ value.USD.VOLUMEDAYTO }}<br/><br/>
+                      <strong>24h Volume</strong>: {{ value.USD.VOLUME24HOUR }}<br/><br/>
+                      <strong>24h Volume To</strong>: {{ value.USD.VOLUME24HOURTO }}<br/><br/>
+                      <strong>Supply</strong>: {{ value.USD.SUPPLY }}<br/>         
+              </div>--> 
+            </div>
+          </div>
+        </section>
+	
+<section class="mb-0 mt-0">
+      <div class="footer text-light">
+        <div class="   bg-dark pt-5 pb-5">
+          <div class="container">
+            <div class="row f-flex justify-content-between" style="justify-content: space-between;">
+              <div class="col-md-8 text-xs-center  text-left text-secondary my-1">
+                <p class="mt-2  text-light"> © Copyright 2021 • All Rights Reserved | Website built by Front-End Vision & Designs, LLC<br/><a id="footer" class=" " href="{% url 'terms' %}" style="text-decoration: none;">Terms & Conditions</a> | <a id="footer" class=" " href="{% url 'home' %}#contact" style="text-decoration: none;">Contact</a> | <a id="footer" class=" " href="{% url 'home' %}#learn" style="text-decoration: none;">Learn</a> | <a id="footer" class=" " href="{% url 'home' %}#news" style="text-decoration: none;">News</a> | <a id="footer" class=" " href="{% url 'home' %}#live-prices" style="text-decoration: none;">Live Prices</a> | <a id="footer" class=" " href="{% url 'home' %}#videos" style="text-decoration: none;">Videos</a> | <a id="footer" class=" " href="{% url 'home' %}#analysts" style="text-decoration: none;">Analysts</a> | <a id="footer" class=" " href="{% url 'home' %}#research" style="text-decoration: none;">Research</a></p>
+              </div>
+              <div class="col-md-4 text-xs-center   text-lg-right text-secondary my-1">s
+                <div class="btn-container  mt-1 text-md-right text-sm-center">
+                  <div class="mb-1 mr-3 align-self-right pt-0 d-inline-block">
+                    <a href="https://twitter.com/CryptoNewsNtwk" role="button" class="text-light p-2 m-2 btn btn-round btn-rised btn-icon btn-info bgd-gradient-blue"><i class="fa fa-twitter fa-lg color-light" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/Crypto-News-Network-107942398069141" role="button" class="text-light p-2 m-2 btn btn-round btn-rised btn-icon btn-info bgd-gradient-blue"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/cryptonewsnetwork/" role="button" class="text-light p-2 m-2 btn btn-round btn-rised btn-icon btn-info bgd-gradient-blue"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/webmaster.cryptonewsnetwork/" role="button" class="text-light p-2 m-2 btn btn-rised btn-round btn-icon btn-info bgd-gradient-blue"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <!-- jQuery is required -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <script>
+	$('document').ready( function(){
+		setTimeout(function(){ 
+			$('body').removeClass('loader-in');
+			$('#loader-bitcoin').remove();
+		}, 1000);
+			
+	})
+  </script>
+  
+  <script>
+		
+particlesJS("particles-js", {
+    "particles": {
+		"number": {
+			"value": 80,
+			"density": {
+				"enable": true,
+				"value_area": 800
+			}
+		},
+		"color": {
+			"value": "#ffffff"
+		},
+		"shape": {
+			"type": "circle",
+			"stroke": {
+				"width": 0,
+				"color": "#000000"
+			},
+			"polygon": {
+				"nb_sides": 5
+			},
+			"image": {
+				"src": "img/github.svg",
+				"width": 100,
+				"height": 100
+			}
+		},
+		"opacity": {
+			"value": 0.5,
+			"random": false,
+			"anim": {
+				"enable": false,
+				"speed": 1,
+				"opacity_min": 0.1,
+				"sync": false
+			}
+		},
+		"size": {
+			"value": 6,
+			"random": true,
+			"anim": {
+				"enable": false,
+				"speed": 20,
+				"size_min": 0.1,
+				"sync": false
+			}
+		},
+		"line_linked": {
+			"enable": true,
+			"distance": 150,
+			"color": "#ffffff",
+			"opacity": 0.4,
+			"width": 1
+		},
+		"move": {
+			"enable": true,
+			"speed": 6,
+			"direction": "none",
+			"random": false,
+			"straight": false,
+			"out_mode": "out",
+			"bounce": false,
+			"attract": {
+				"enable": false,
+				"rotateX": 600,
+				"rotateY": 1200
+			}
+		}
+	},
+	"interactivity": {
+		"detect_on": "canvas",
+		"events": {
+			"onhover": {
+				"enable": true,
+				"mode": "grab"
+			},
+			"onclick": {
+				"enable": true,
+				"mode": "push"
+			},
+			"resize": true
+		},
+		"modes": {
+			"grab": {
+				"distance": 140,
+				"line_linked": {
+					"opacity": 1
+				}
+			},
+			"bubble": {
+				"distance": 400,
+				"size": 40,
+				"duration": 2,
+				"opacity": 8,
+				"speed": 3
+			},
+			"repulse": {
+				"distance": 200,
+				"duration": 0.4
+			},
+			"push": {
+				"particles_nb": 4
+			},
+			"remove": {
+				"particles_nb": 2
+			}
+		}
+	},
+	"retina_detect": true
+});
+  </script>
+  
+  <script>
+		$(document).ready(function () {
+		
+		$(window).scroll(function() {
+			if ($("nav").offset().top > 50) {
+				$("nav").addClass("bgd-gradient-blue ");
+				$("nav").removeClass("bg-transparent");
+			} else {
+				$("nav").removeClass("bgd-gradient-blue");
+				$("nav").addClass("bg-transparent");
+			}
+		});
+
+				$(document).on("scroll", onScroll);
+				
+				//smoothscroll
+				$('nav ul li a[href^="#"], .scroll').on('click', function (e) {
+					e.preventDefault();
+					$(document).off("scroll");
+					
+					$('nav ul li a').each(function () {
+						$(this).removeClass('active');
+					})
+					$(this).addClass('active');
+				  
+					var target = this.hash,
+						menu = target;
+					$target = $(target);
+					$('html, body').stop().animate({
+						'scrollTop': $target.offset().top+2
+					}, 500, 'swing', function () {
+						window.location.hash = target;
+						$(document).on("scroll", onScroll);
+					});
+				});
+			});
+
+			function onScroll(event){
+				var scrollPos = $(document).scrollTop();
+				$('nav ul li a, .scroll').each(function () {
+					var currLink = $(this);
+					var refElement = $(currLink.attr("href"));
+					if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+						$('nav ul li a').removeClass("active");
+						currLink.addClass("active");
+					}
+					else{
+						currLink.removeClass("active");
+					}
+				});
+			}
+  </script>
+</body>
+
+</html>
+

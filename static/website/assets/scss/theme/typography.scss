@@ -1,0 +1,130 @@
+//typography  ////////////////////////////////
+//
+
+//body{
+	//@include rfs(18);
+//}
+
+p.lead{
+  line-height: 1.3em;
+	margin-top: $margin-base-vertical *1.5;
+    margin-bottom: $margin-base-vertical *2;
+	 @include rfs(22);
+    .description &,
+    &.description{
+        @include rfs(16);
+    }
+}
+
+p{
+    font-size: 1em;
+    line-height: 1.7em;
+    font-weight: $font-weight-normal;
+    font-family:  $roboto;
+}
+
+
+button,
+input,
+optgroup,
+select,
+textarea{
+     font-family:  $roboto;
+}
+
+small{
+    font-size: 70%;
+}
+.text-light a:not(.btn, .dropdown-item){
+	color: $light;
+}
+/*a:not(.btn, .badge, .page-link, .nav-link.active){
+    color: $primary;
+    &:hover,
+    &:focus{
+        color: $primary;
+    }
+}*/
+
+h1,h2,h3,h4,h5,h6{
+	font-family: $font-family-sans-serif;
+	font-weight: $font-weight-normal;
+  -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.display-1  {
+  margin-bottom: $margin-base-vertical * 2;
+	//font-weight:$font-weight-bold;
+  font-size: 4rem;
+  font-weight: $font-weight-normal;
+    small{
+        font-weight: $font-weight-xs;
+        text-transform: uppercase;
+        opacity: .8;
+    }
+}
+
+
+.display-1.hero-header {
+	font-weight: $font-weight-xs;
+
+	font-size: 4rem;
+	margin-bottom:20px;
+   }
+
+.display-2{
+  margin-top: $margin-base-vertical * 2;
+  margin-bottom: $margin-base-vertical * 2;
+	font-weight: $font-weight-normal;
+  font-size: 3rem;
+}
+.display-3{
+  margin-top: $margin-base-vertical * 2;
+  margin-bottom: $margin-base-vertical * 2;
+  font-weight:$font-weight-normal;
+  font-size: 2.5rem;
+}
+.display-4{
+   margin-top: $margin-base-vertical * 2;
+   margin-bottom: $margin-base-vertical *1.5;
+	 font-weight:$font-weight-normal;
+   font-size: 1.8rem;
+	 text-transform: uppercase;
+     & + .category,
+     &.title + .category{
+        margin-top: -10px;
+    }
+}
+.display-5 {
+    font-family: $roboto;
+    line-height: 1.5;
+    font-weight:$font-weight-xs;
+    margin-bottom: 15px;
+}
+.display-6{
+  font-weight:$font-weight-normal;
+  text-transform: uppercase;
+}
+
+
+
+
+//.display-1 {
+//  @include rfs(62);
+//}
+//.display-2 {
+//  @include rfs(42);
+//}
+//.display-3 {
+//  @include rfs(34);
+//}
+//.display-4 {
+//  @include rfs(22);
+//}
+//.display-5{
+//  @include rfs(18);
+//}
+//.display-6 {
+//  @include rfs(14);
+//}

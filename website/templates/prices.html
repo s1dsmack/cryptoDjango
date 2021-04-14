@@ -1,0 +1,440 @@
+{% load static %}
+
+{% block content %}
+
+  {% if notfound %}
+    
+    <h3>{{ notfound }}</h3>
+
+
+  {% else %}
+    
+    {% if crypto.Response %}
+      <h3>Sorry, {{ quote }} does not exist. Please try again...</h3>
+
+  {% endif %}
+
+  {% for key,value in crypto.DISPLAY.items %}
+
+    <!doctype html>
+    <html lang="en">
+
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="icon" href="{% static 'website/assets/images/logos/crypto_favicon.ico' %}">
+      <!-- Bootstrap core CSS + Orange theme -->
+      <link rel="stylesheet" href="{% static 'website/assets/css/theme/style.css' %}">
+      <link rel="stylesheet" href="{% static 'website/assets/css/font-awesome.min.css' %}">
+      <link rel="stylesheet" href="{% static 'website/assets/css/templates/crypto/style-crypto.css' %}">
+    	
+
+
+    <title>Crypto News Network</title>
+
+
+      <!-- Custom styles for this template -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+    <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+
+      <style>
+
+        .jumbotron {
+          position: relative;
+          background: none;
+        }
+
+        .jumbotron-bg {
+          opacity: 0.6;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 1;
+        }   
+
+        .cover-container {
+          position: relative;
+          z-index:2;
+        }
+
+        .nav-link:hover {
+          color: gold !important; /* mouse over link is gold */
+        }
+
+        .navbar-brand:hover {
+          color: gold !important; /* mouse over link is gold */
+        }
+
+        .fa:hover {
+          color: #20B2AA !important; /* mouse over link is lightseagreen */ 
+        }
+
+        #footer:hover {
+          color: gold !important; /* mouse over link is gold */ 
+        }
+
+
+      </style>
+
+    </head>
+
+    <body class="loader-in">
+    <!--<div id="loader-bitcoin" class="justify-content-center d-flex flex-wrap">
+    	<div id="bitcoin">
+    	  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    		 width="200px" height="200px" viewBox="100 100 400 400" xml:space="preserve">
+    		<filter id="dropshadow" height="130%">
+    	  <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+    	  <feOffset dx="0" dy="0" result="offsetblur"/>
+    	  <feFlood flood-color="red"/>
+    	<feComposite in2="offsetblur" operator="in"/>
+    	<feMerge>
+    	<feMergeNode/>
+    	<feMergeNode in="SourceGraphic"/>
+    	</feMerge>
+    	</filter>          
+    	<path class="path" style="filter:url(#dropshadow)" fill="#000000" d="M446.089,261.45c6.135-41.001-25.084-63.033-67.769-77.735l13.844-55.532l-33.801-8.424l-13.48,54.068
+    		c-8.896-2.217-18.015-4.304-27.091-6.371l13.568-54.429l-33.776-8.424l-13.861,55.521c-7.354-1.676-14.575-3.328-21.587-5.073
+    		l0.034-0.171l-46.617-11.64l-8.993,36.102c0,0,25.08,5.746,24.549,6.105c13.689,3.42,16.159,12.478,15.75,19.658L208.93,357.23
+    		c-1.675,4.158-5.925,10.401-15.494,8.031c0.338,0.485-24.579-6.134-24.579-6.134l-9.631,40.468l36.843,9.188
+    		c8.178,2.051,16.209,4.19,24.098,6.217l-13.978,56.17l33.764,8.424l13.852-55.571c9.235,2.499,18.186,4.813,26.948,6.995
+    		l-13.802,55.309l33.801,8.424l13.994-56.061c57.648,10.902,100.998,6.502,119.237-45.627c14.705-41.979-0.731-66.193-31.06-81.984
+    		C425.008,305.984,441.655,291.455,446.089,261.45z M368.859,369.754c-10.455,41.983-81.128,19.285-104.052,13.589l18.562-74.404
+    		C306.28,314.65,379.774,325.975,368.859,369.754z M379.302,260.846c-9.527,38.187-68.358,18.781-87.442,14.023l16.828-67.489
+    		C327.767,212.14,389.234,221.02,379.302,260.846z"/>
+    			  
+    	</svg>
+    	</div>
+    </div>
+
+      <div class="site-wrapper p-0 cover" style="background-image: url({% static 'website/assets/images/photos/backgroundpic_bitcoin_1c.jpg' %})">
+    	
+        <div class="site-wrapper-inner header-overlay-blue	 cover">-->
+    	<!-- particlesjs component -->
+    		<div id="particles-js"></div>
+          <div class="cover-container relative">
+
+           <header class="">
+    	   
+             <nav class="fixed-top  navbar text-white  navbar-expand-md  navbar-dark bg-transparent mb-5">
+    			<div class="container">
+                        <a class="navbar-brand" href="{% url 'home' %}"> <img src="{% static 'website/assets/images/icons/crypto/svg/block_chain.svg' %}" class="currency-icon img-fluid" alt="CryptoDesk"> Crypto News Network</a>
+                        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="navbar-collapse collapse" id="navbarsExampleDefault">
+                          <ul class="navbar-nav mr-auto"> 
+                            <li class="nav-item">
+                              <a class="nav-link" href="{% url 'home' %}#learn">Learn</a>
+                            </li>
+    						            <li class="nav-item">
+                              <a class="nav-link" href="{% url 'home' %}#news">News</a>
+                            </li>
+    						            <li class="nav-item">
+                              <a class="nav-link" href="{% url 'home' %}#live-prices">Live Prices</a>
+                            </li>
+    						            <li class="nav-item">
+                              <a class="nav-link" href="{% url 'home' %}#videos">Videos</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="{% url 'home' %}#analysts">Analysts</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="{% url 'home' %}#research">Research</a>
+                            </li> 
+    						            <li class="nav-item">
+                              <a class="nav-link" href="{% url 'home' %}#contact">Contact</a>
+                            </li>
+                          </ul>
+
+                          <div class="mb-0 mt-0 mr-0 align-self-right pt-0 d-inline-block">
+                            <a href="#" role="button" class="  p-2 m-2"><i class="fa fa-twitter  text-light " aria-hidden="true"></i></a>
+                            <a href="#" role="button" class="  p-2 m-2"><i class="fa fa-facebook  text-light " aria-hidden="true"></i></a>
+                            <a href="#" role="button" class="  p-2 m-2"><i class="fa fa-linkedin  text-light " aria-hidden="true"></i></a>
+                            <a href="#" role="button" class="  p-2 m-2"><i class="fa fa-instagram  text-light " aria-hidden="true"></i></a>
+                          </div>
+                        </div>
+    					</div>
+                      </nav>
+    				
+            </header>
+
+            <!--<main id="top" role="main" class="inner ">
+        		  <div class="container">
+                <div class="row">
+                  <div class="col-12 col-md-12  ">
+                  <h1 class="cover-heading display-1 mt-5 pt-5 mb-2" style="color: #E66C2C;">Want To Buy Bitcoin?</h1>
+                  <h3 class="display-5" style="font-size: 160%;"><i><b>Check us out! We've got the latest in blockchain news and research!</b></i></h3>
+                  <p class="lead">
+                    <a href="{% url 'home' %}#learn" class="btn  scroll bgd-gradient-blue btn-lg  mt-3 mb-3 mr-2 ml-0 btn-round btn-rised">Learn more</a>
+                    <a href="{% url 'home' %}#subscribe" class="btn  scroll bgd-gradient-orange btn-lg  mt-3 mb-3 mr-2 ml-0 btn-round btn-rised">Subscribe</a>
+                  </p>
+        		      </div>
+                </div>
+              </div>
+            </main>-->
+
+          
+
+          </div>
+    		
+        </div>
+
+      </div>
+              
+            <section class="bg-gray">
+              <div class="header text-light  header-h100  cover  bg-fixed" style="background-image:url({% static 'website/assets/images/headers/header-21.jpg' %})">
+                <div class="header-overlay-blue  header-h100   pt-5 pb-5 d-flex  justify-content-center align-items-center" style="">
+                  <!--<div class="container">
+                    <div class="row justify-content-center">
+                      <div class="col-12  col-md-6 text-center">
+                        <img alt="image" class="img-fluid ml-auto" width="60" src="{% static 'website/assets/images/icons/crypto/svg/centralized.svg' %}">
+                        <h1 class="display-3 mb-3">Live Market Pricing</h1>
+                      </div>
+                    </div>
+                  </div>-->
+                      
+                      
+                  <div class="jumbotron" align="left">
+                    <div class="jumbotron-bg"></div>
+                    <div class="cover-container"></div>
+                      <h1 class="display-1" style="color: #E66C2C;">{{ key }}</h1> 
+                      <hr class="my-2" style="color:#E66C2C;">
+                      <strong>Name</strong>: {{ key }}<br/><br/>
+                          <strong>Price</strong>: {{ value.USD.PRICE }}<br/><br/>
+                          <strong>Day High</strong>: {{ value.USD.HIGHDAY }}<br/><br/>
+                          <strong>Day Low</strong>: {{ value.USD.LOWDAY }}<br/><br/>
+                          <strong>Market Cap</strong>: {{ value.USD.MKTCAP }}<br/><br/>
+                          <strong>Day Volume</strong>: {{ value.USD.VOLUMEDAY }}<br/><br/>
+                          <strong>Day Volume To</strong>: {{ value.USD.VOLUMEDAYTO }}<br/><br/>
+                          <strong>24h Volume</strong>: {{ value.USD.VOLUME24HOUR }}<br/><br/>
+                          <strong>24h Volume To</strong>: {{ value.USD.VOLUME24HOURTO }}<br/><br/>
+                          <strong>Supply</strong>: {{ value.USD.SUPPLY }}<br/>         
+                  </div> 
+                </div>
+              </disv>
+            </section>
+
+{% endfor %}  
+
+{% endif %}
+
+{% endblock %}
+
+	
+<section class="mb-0 mt-0">
+      <div class="footer text-light">
+        <div class="   bg-dark pt-5 pb-5">
+          <div class="container">
+            <div class="row f-flex justify-content-between" style="justify-content: space-between;">
+              <div class="col-md-8 text-xs-center  text-left text-secondary my-1">
+                <p class="mt-2  text-light"> © Copyright 2021 • All Rights Reserved | Website built by Front-End Vision & Designs, LLC<br/><a id="footer" class=" " href="{% url 'terms' %}" style="text-decoration: none;">Terms & Conditions</a> | <a id="footer" class=" " href="{% url 'home' %}#contact" style="text-decoration: none;">Contact</a> | <a id="footer" class=" " href="{% url 'home' %}#learn" style="text-decoration: none;">Learn</a> | <a id="footer" class=" " href="{% url 'home' %}#news" style="text-decoration: none;">News</a> | <a id="footer" class=" " href="{% url 'home' %}#live-prices" style="text-decoration: none;">Live Prices</a> | <a id="footer" class=" " href="{% url 'home' %}#videos" style="text-decoration: none;">Videos</a> | <a id="footer" class=" " href="{% url 'home' %}#analysts" style="text-decoration: none;">Analysts</a> | <a id="footer" class=" " href="{% url 'home' %}#research" style="text-decoration: none;">Research</a></p>
+              </div>
+              <div class="col-md-4 text-xs-center   text-lg-right text-secondary my-1">
+                <div class="btn-container  mt-1 text-md-right text-sm-center">
+                  <div class="mb-1 mr-3 align-self-right pt-0 d-inline-block">
+                    <a href="#" role="button" class="text-light p-2 m-2 btn btn-round btn-rised btn-icon btn-info bgd-gradient-blue"><i class="fa fa-twitter fa-lg color-light" aria-hidden="true"></i></a>
+                    <a href="#" role="button" class="text-light p-2 m-2 btn btn-round btn-rised btn-icon btn-info bgd-gradient-blue"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+                    <a href="#" role="button" class="text-light p-2 m-2 btn btn-round btn-rised btn-icon btn-info bgd-gradient-blue"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+                    <a href="#" role="button" class="text-light p-2 m-2 btn btn-rised btn-round btn-icon btn-info bgd-gradient-blue"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <!-- jQuery is required -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <script>
+	$('document').ready( function(){
+		setTimeout(function(){ 
+			$('body').removeClass('loader-in');
+			$('#loader-bitcoin').remove();
+		}, 1000);
+			
+	})
+  </script>
+  
+  <script>
+		
+particlesJS("particles-js", {
+    "particles": {
+		"number": {
+			"value": 80,
+			"density": {
+				"enable": true,
+				"value_area": 800
+			}
+		},
+		"color": {
+			"value": "#ffffff"
+		},
+		"shape": {
+			"type": "circle",
+			"stroke": {
+				"width": 0,
+				"color": "#000000"
+			},
+			"polygon": {
+				"nb_sides": 5
+			},
+			"image": {
+				"src": "img/github.svg",
+				"width": 100,
+				"height": 100
+			}
+		},
+		"opacity": {
+			"value": 0.5,
+			"random": false,
+			"anim": {
+				"enable": false,
+				"speed": 1,
+				"opacity_min": 0.1,
+				"sync": false
+			}
+		},
+		"size": {
+			"value": 6,
+			"random": true,
+			"anim": {
+				"enable": false,
+				"speed": 20,
+				"size_min": 0.1,
+				"sync": false
+			}
+		},
+		"line_linked": {
+			"enable": true,
+			"distance": 150,
+			"color": "#ffffff",
+			"opacity": 0.4,
+			"width": 1
+		},
+		"move": {
+			"enable": true,
+			"speed": 6,
+			"direction": "none",
+			"random": false,
+			"straight": false,
+			"out_mode": "out",
+			"bounce": false,
+			"attract": {
+				"enable": false,
+				"rotateX": 600,
+				"rotateY": 1200
+			}
+		}
+	},
+	"interactivity": {
+		"detect_on": "canvas",
+		"events": {
+			"onhover": {
+				"enable": true,
+				"mode": "grab"
+			},
+			"onclick": {
+				"enable": true,
+				"mode": "push"
+			},
+			"resize": true
+		},
+		"modes": {
+			"grab": {
+				"distance": 140,
+				"line_linked": {
+					"opacity": 1
+				}
+			},
+			"bubble": {
+				"distance": 400,
+				"size": 40,
+				"duration": 2,
+				"opacity": 8,
+				"speed": 3
+			},
+			"repulse": {
+				"distance": 200,
+				"duration": 0.4
+			},
+			"push": {
+				"particles_nb": 4
+			},
+			"remove": {
+				"particles_nb": 2
+			}
+		}
+	},
+	"retina_detect": true
+});
+  </script>
+  
+  <script>
+		$(document).ready(function () {
+		
+		$(window).scroll(function() {
+			if ($("nav").offset().top > 50) {
+				$("nav").addClass("bgd-gradient-blue ");
+				$("nav").removeClass("bg-transparent");
+			} else {
+				$("nav").removeClass("bgd-gradient-blue");
+				$("nav").addClass("bg-transparent");
+			}
+		});
+
+				$(document).on("scroll", onScroll);
+				
+				//smoothscroll
+				$('nav ul li a[href^="#"], .scroll').on('click', function (e) {
+					e.preventDefault();
+					$(document).off("scroll");
+					
+					$('nav ul li a').each(function () {
+						$(this).removeClass('active');
+					})
+					$(this).addClass('active');
+				  
+					var target = this.hash,
+						menu = target;
+					$target = $(target);
+					$('html, body').stop().animate({
+						'scrollTop': $target.offset().top+2
+					}, 500, 'swing', function () {
+						window.location.hash = target;
+						$(document).on("scroll", onScroll);
+					});
+				});
+			});
+
+			function onScroll(event){
+				var scrollPos = $(document).scrollTop();
+				$('nav ul li a, .scroll').each(function () {
+					var currLink = $(this);
+					var refElement = $(currLink.attr("href"));
+					if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+						$('nav ul li a').removeClass("active");
+						currLink.addClass("active");
+					}
+					else{
+						currLink.removeClass("active");
+					}
+				});
+			}
+  </script>
+</body>
+
+</html>
+

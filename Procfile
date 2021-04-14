@@ -1,0 +1,1 @@
+web: gunicorn cryptonews.wsgi:application

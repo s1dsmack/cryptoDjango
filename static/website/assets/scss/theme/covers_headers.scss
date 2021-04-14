@@ -1,0 +1,99 @@
+
+
+//covers  ////////////////////////////////
+
+.no-gutters .card-deck .card{
+	border-radius: 0;
+}
+.bg-cover,
+.cover{
+	background-size: cover !important;
+	background-position: center center !important;
+}
+.bg-fixed{
+	background-attachment: fixed !important;
+}
+
+.bgp-cc,
+.bg-pcc{
+	background-position: center center !important;
+}
+
+// Extra height sections ////////////////////////////////
+
+.header-h125,
+.vh-125 {
+    min-height: 125vh;
+    background-position: center center !important;
+    background-size: cover;
+}
+
+.header-h100,
+.vh-100 {
+    min-height: 100vh;
+    padding: 0;
+    position: relative;
+    background-position: center center !important;
+    background-size: cover;
+}
+
+.header-h60,
+.vh-60 {
+    min-height: 60vh;
+	  background-position: center center !important;
+    background-size: cover;
+}
+
+//color overlays ////////////////////////////////
+
+//mixin "rgba"
+
+@mixin background-opacity($color, $opacity: 0.5) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
+
+element {
+     @include background-opacity(#333, 0.5);
+}
+
+.header-overlay-primary {
+	 color: $light;
+  @include background-opacity($primary, 0.78);
+}
+
+.header-overlay-dark{
+	color: $light;
+	@include background-opacity($dark, 0.58);
+}
+
+.header-overlay-red{
+	color: $light;
+	@include background-opacity($red, 0.58);
+}
+
+.header-overlay-orange{
+	color: $light;
+	@include background-opacity($orange, 0.38);
+}
+.header-overlay-dark-orange{
+	color: $light;
+	@include background-opacity($orange, 0.88);
+}
+
+.header-overlay-blue{
+	color: $light;
+	@include background-opacity($blue, 0.58);
+}
+.header-overlay-dark-blue{
+	color: $light;
+	@include background-opacity($orange, 0.88);
+}
+
+.header-overlay-white{
+	background: rgba(255, 255, 255, 0.8);
+	background: -webkit-linear-gradient(275deg, rgba(255, 255, 255, 0.81), rgba(255, 255, 255, .99));
+	background: -o-linear-gradient(275deg, rgba(255, 255, 255, 0.81), rgba(255, 255, 255, .99));
+	background: -moz-linear-gradient(275deg, rgba(255, 255, 255, 0.81), rgba(255, 255, 255, .99));
+	background: linear-gradient(275deg, rgba(255, 255, 255, 0.81), rgba(255, 255, 255, .99));
+}

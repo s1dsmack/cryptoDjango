@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="64px" height="64px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+<style type="text/css">
+<![CDATA[
+	.st0{fill:#EFE6FF;}
+	.st1{fill:url(#SVGID_1_);}
+]]>
+</style>
+<g id="pyramid_x1F__x5F_scheme">
+	<path class="st0" d="M20.75,24l6.187-2.351L10.391,48.12L7,46L20.75,24z M26,47l4-1v-6l-4-1V47z M43.25,24l-6.187-2.351
+		L53.608,48.12L57,46L43.25,24z M38,39l-4,1v6l4,1V39z"/>
+	<g>
+		<g>
+			<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="12.5005" y1="25.5005" x2="51.5005" y2="64.5005">
+				<stop  offset="0" style="stop-color:#E68CBC"/>
+				<stop  offset="1" style="stop-color:#8366B3"/>
+			</linearGradient>
+			<path class="st1" d="M57,46H46.975l2.574,8H62L57,46z M34,42h20.5L47,30H34V42z M9.5,42H30V30H17L9.5,42z M32,6L19.5,26h25L32,6z
+				 M2,54h12.451l2.575-8H7L2,54z M34,46v8h11.348l-2.575-8H34z M18.653,54H30v-8h-8.772L18.653,54z"/>
+		</g>
+	</g>
+</g>
+</svg>

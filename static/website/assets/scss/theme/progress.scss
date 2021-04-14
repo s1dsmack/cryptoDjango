@@ -1,0 +1,46 @@
+
+
+//progress bar  ////////////////////////////////
+
+.progress{
+	font-size: 0.8rem;
+	height: .2rem;
+    overflow: visible;
+    font-size: 0.75rem;
+    background-color: #e9ecef;
+    border-radius: 0;
+}
+
+.progress-bar{
+	position: relative;
+	color:$dark;
+
+  &.progress-bar-primary{
+	  color:  $primary;
+      background-color:  $primary;
+      @include background-gradient($primary, 0.3);
+  }
+  &.progress-bar-info{
+	  color:  $info;
+      background-color:  $info;
+      @include background-gradient($info, 0.3);
+  }
+  &.progress-bar-success{
+      color:  $success;
+      background-color:  $success;
+      @include background-gradient($success, 0.3);
+     //@include gradient-x-three-colors($start-color: #48d795, $mid-color: #91e482, $color-stop: 50%, $end-color: #c7ed73);
+  }  
+  &.progress-bar-danger{
+      color:  $danger;
+      background-color:  $danger;
+      @include background-gradient($danger, 0.3);
+ 
+  }
+}
+	span.progress-value {
+		position: absolute;
+		top: -18px;
+		right: 0;
+   }
+   

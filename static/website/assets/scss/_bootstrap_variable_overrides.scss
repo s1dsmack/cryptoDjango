@@ -1,0 +1,119 @@
+
+//////////////////////////////////////////////////////////////////////
+// The NEXT> Bootstrap 4 UI KIT  v.1.0.0 | Bootstraptor.com  (c) 2018 //
+////////////////////////////////////////////////////////////////////
+
+
+// HELPERS
+
+@import "theme/mdl-shadows"; // Material design shadows
+
+// ******  FONTS & ICONS
+
+@import "fonts/woGXWe";   //  Google fonts import mixin
+@import "fonts/gfonts";    // Edit google web font
+@import "fonts/rfs";      // responsive fonts adapted for devices***
+
+// GRADIENTS
+
+//@import "_customgradients"; // Custom gradients
+//@import "mixins/rgba"; // helper mixin hex2rgba
+//@import "mixins/rgba-gradient-mixin";  //image overlay gradient
+
+//  CUSTONS TRANSITIONS
+@import "helpers/transitions"; // Custom transitions
+@import "helpers/images"; // Custom transitions
+
+//  FONTS
+@import "fonts/fonts"; // Custom fonts
+
+//  Theming Bootstrap > Custom theme colors
+//
+
+/////   Bootstrap variables  ///////////////////////////////////////////////////////////////////
+// Bootstrap variables rewriting to custom color palette
+//in HEX format only!
+
+$blue:            #1195c6;
+$indigo:          #604c8d;
+$purple:          #c51555;
+$pink:            #e83e8c;
+$red:             #eb3a26;
+$orange:          #f2672e;
+$yellow:          #ffdc04;
+$green:           #00a590;
+$teal:            #1ca28a;
+$cyan:            #17a2b8;
+$white:           #FFFFFF;
+$light:           #f8f9fa;
+$secondary:       #6a626d;
+$dark:            #101920;
+
+
+//    Create custom theme       ///////////////////////////////////////////////////////////////////
+
+//   ||  ++++++++  Change variable or color (in HEX format only)
+// Example ->   $primary: $cyan;    - or ->  $primary: #20c997; // #604c8d;
+
+$primary:           #1ca28a; //primary color
+
+
+//* secondary theme colors    ///////////////////////////////////////////////////////////////////
+
+$success:	        $green;
+$info:		        $blue;
+
+//Default theme
+
+$body-bg:         	$white;
+$body-color:      	#2b2b2b;
+$info-color:      	$white;
+$warning-color:   	$body-color;
+$white-color: 	  	$white;
+
+
+/* transparent helper variable */
+$transparent-bg:  transparent;
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// Buttons
+@import "components/buttons";
+
+// Forms
+@import "components/forms";
+
+
+// Progress bar
+@import "components/progress";
+
+// Progress bar
+@import "components/nav";
+
+// Custom cards
+@import "components/custom-cards";
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+//  @import Bootstrap v 4
+//  main bootstrap sass core importing after custom variables
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@import "bootstrap/bootstrap";
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// IMPORT CUSTOM COMPONENTS
+@import "theme/helpers";
+@import "theme/backgrounds";
+@import "theme/buttons";
+@import "theme/form_inputs";
+@import "theme/typography";
+@import "theme/cards";
+@import "theme/borders";
+@import "theme/navs";
+@import "theme/badges";
+@import "theme/images";
+@import "theme/covers_headers";
+@import "theme/shadows";

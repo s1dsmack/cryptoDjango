@@ -1,0 +1,58 @@
+
+
+//*** global
+
+* {
+
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition: opacity 0.2s ease;
+    -moz-transition: opacity 0.2s ease;
+    -ms-transition: opacity 0.2s ease;
+    -o-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
+}
+
+
+body {
+    font-size: 1.1em;
+    line-height: 1.45;
+    //font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
+     font-family: $roboto;
+    -webkit-font-smoothing: antialiased;
+}
+
+section.jumbotron{
+	border-radius: 0;
+}
+
+//color improvements  ////////////////////////////////
+.bg-dark{
+		color: $light;
+	}
+
+
+
+// LAYOUT HELPERS ////////////////////////////////
+
+//overflow
+.overflow-yh{
+  overflow-y: hidden; // horizontal  
+}
+
+.overflow-xh{
+  overflow-x: hidden; // vertical 
+}
+
+.overflow-v{
+  overflow: visible;
+}
+// TEMPLATES ////////////////////////////////
+
+// Blog template ////////////////////////////////
+
+p.blog-post-meta {
+    line-height: 1em;
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="64px" height="64px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+<style type="text/css">
+<![CDATA[
+	.st0{fill:#EFE6FF;}
+	.st1{fill:url(#SVGID_1_);}
+]]>
+</style>
+<g id="mining_1_">
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="13.1255" y1="13.1255" x2="57.8755" y2="57.8755">
+		<stop  offset="0" style="stop-color:#E68CBC"/>
+		<stop  offset="1" style="stop-color:#8366B3"/>
+	</linearGradient>
+	<path class="st1" d="M12,15c0,0.411,1.429,1.532,22.869,24C53,58,54,60,55,60s5-4,5-5s-2-2-21-20.131
+		C16.532,13.429,15.411,12,15,12C14,12,12,14,12,15z"/>
+	<path class="st0" d="M49.021,6.808C46.604,6.288,44.101,6,41.526,6C21.905,6,6,21.905,6,41.526c0,2.574,0.288,5.077,0.808,7.495
+		C11,30,30,11,49.021,6.808z"/>
+	<path class="st0" d="M13,56l-2,4l-2-4l2-4L13,56z M55,11l-2,4l2,4l2-4L55,11z M47,25l-2,4l2,4l2-4L47,25z M19,39l-3,6l3,6l3-6
+		L19,39z"/>
+</g>
+</svg>

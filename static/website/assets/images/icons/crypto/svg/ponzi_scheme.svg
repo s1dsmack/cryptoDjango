@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="64px" height="64px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+<style type="text/css">
+<![CDATA[
+	.st0{fill:#EFE6FF;}
+	.st1{fill:url(#SVGID_1_);}
+]]>
+</style>
+<g id="ponzi_x1F__x5F_scheme">
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="12.5005" y1="25.5005" x2="51.5005" y2="64.5005">
+		<stop  offset="0" style="stop-color:#E68CBC"/>
+		<stop  offset="1" style="stop-color:#8366B3"/>
+	</linearGradient>
+	<path class="st1" d="M39.5,42h-15L32,30L39.5,42z M44.5,26h-25L32,6L44.5,26z M27,46l-5,8h10L27,46z M7,46l-5,8h10L7,46z M17,46
+		l-5,8h10L17,46z M57,46l-5,8h10L57,46z M37,46l-5,8h10L37,46z M47,46l-5,8h10L47,46z M47,30l-7.5,12h15L47,30z M17,30L9.5,42h15
+		L17,30z"/>
+	<g>
+		<g>
+			<polygon class="st0" points="37,22 32,14 27,22 30,22 30,50.8 32,54 34,50.8 34,22 			"/>
+		</g>
+	</g>
+</g>
+</svg>

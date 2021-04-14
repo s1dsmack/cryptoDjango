@@ -1,0 +1,11 @@
+//rgba gradient mixin
+@mixin background-opacity($color, $opacity: 0.38) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+	background: -webkit-linear-gradient( 180deg, rgba($color, $opacity), rgba(0, 0, 0, 0.9));      /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient( 180deg, rgba($color, $opacity), rgba(0, 0, 0, 0.9));      /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient( 180deg, rgba($color, $opacity), rgba(0, 0, 0, 0.9));      /* For Firefox 3.6 to 15 */
+	background: linear-gradient( 180deg, rgba($color, $opacity), rgba(0, 0, 0, 0.9));      /* Standard syntax */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba($color, $opacity)', endColorstr='rgba(0, 0, 0, 0.9)', GradientType=0 );
+}
+

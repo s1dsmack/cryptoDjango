@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="64px" height="64px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+<style type="text/css">
+<![CDATA[
+	.st0{fill:#EFE6FF;}
+	.st1{fill:url(#SVGID_1_);}
+]]>
+</style>
+<g id="namecoin_1_">
+	<path class="st0" d="M47.588,18c-2.087,0-4.243,1.691-4.813,3.78c-0.225,0.82-1.806,6.597-3.369,12.305L27.854,18l0,0h-1.303
+		c-2.088,0-4.244,1.691-4.813,3.78C21.276,23.461,15.107,46,15.107,46l1.314-0.039c2.088,0,4.244-1.692,4.814-3.78
+		c0.226-0.822,1.8-6.576,3.357-12.264L36.144,46l1.314-0.039c2.09,0,4.245-1.692,4.815-3.78C42.735,40.489,48.893,18,48.893,18
+		H47.588z M25.749,25.689c0.342-1.248,0.664-2.422,0.948-3.46l11.551,16.084c-0.341,1.247-0.662,2.422-0.946,3.459L25.749,25.689z"
+		/>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="12.2007" y1="12.2012" x2="51.7987" y2="51.7992">
+		<stop  offset="0" style="stop-color:#E68CBC"/>
+		<stop  offset="1" style="stop-color:#8366B3"/>
+	</linearGradient>
+	<path class="st1" d="M60.001,32c0.001,15.461-12.539,28-28.003,28C16.538,60,4,47.462,4.001,32.002C3.997,16.537,16.536,4,31.996,4
+		C47.46,4,60,16.537,60.001,32L60.001,32z M54.001,32C54,19.851,44.144,10,31.996,10c-12.145,0-21.999,9.85-21.995,22.001
+		C10,44.146,19.852,54,31.998,54C44.146,54,54.002,44.145,54.001,32L54.001,32z"/>
+</g>
+</svg>

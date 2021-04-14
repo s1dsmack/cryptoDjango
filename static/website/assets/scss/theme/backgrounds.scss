@@ -1,0 +1,93 @@
+
+//background colors  ////////////////////////////////
+
+.bg-primary,
+.swatch-primary {
+	background-color: $primary;
+	color: $light;
+	// @include gradient-directional($start-color: $primary, $end-color: $info, $deg: 45deg);
+ }
+
+.bg-success,
+.swatch-success {
+	background-color: $success;
+	color: $light;
+ }
+
+.bg-danger,
+.swatch-danger {
+	background-color: $red;
+	color: $light;
+ }
+
+.bg-info,
+.swatch-info {
+	background-color: $cyan;
+	color: $light;
+ }
+
+ //color swatches  ////////////////////////////////
+ //
+.bg-blue,
+.swatch-blue {
+	background-color: $blue;
+	color: $light;
+ }
+
+.bg-indigo,
+.swatch-indigo {
+	background-color: $indigo;
+	color: $light;
+ }
+
+.bg-purple,
+.swatch-purple {
+	background-color: $purple;
+	color: $light;
+ }
+
+.bg-pink,
+.swatch-pink {
+	background-color: $pink;
+	color: $light;
+ }
+
+.bg-red,
+.swatch-red {
+	background-color: $red;
+	color: $light;
+ }
+
+.bg-orange,
+.swatch-orange {
+	background-color: $orange;
+	color: $light;
+ }
+
+.bg-yellow,
+.swatch-yellow {
+	background-color: $yellow;
+	color: $dark;
+ }
+
+.bg-green,
+.swatch-green {
+	background-color: $green;
+	color: $light;
+ }
+
+.bg-teal,
+.swatch-teal {
+	background-color: $teal;
+	color: $light;
+ }
+
+.bg-cyan,
+.swatch-cyan {
+	background-color: $cyan;
+	color: $light;
+ }
+
+
+ 
+ 

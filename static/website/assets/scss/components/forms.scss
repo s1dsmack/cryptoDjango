@@ -1,0 +1,21 @@
+$input-bg:                                rgba($white-color, .1);  //transparent; //rgba($white-color, .01);
+$input-group-addon-bg: 					  $input-bg;
+
+//$input-disabled-bg:                     $gray-200 !default;
+//$input-color:                           $gray-700 !default;
+
+$input-border-color:                      #E3E3E3;
+//$input-btn-border-width:                $border-width !default; // For form controls and buttons
+$input-box-shadow:                        $mdl-shadow--16dp;
+$input-border-radius:                     $border-radius-rounded !default;
+$input-border-radius-lg:                  $border-radius-rounded !default;
+$input-border-radius-sm:                  $border-radius-rounded !default;
+$input-focus-bg:                          $white-color !default;
+$input-focus-border-color:               	rgba($primary, .96);
+//$input-focus-color:                     $input-color !default;
+
+//$input-placeholder-color:               $gray-600 !default;
+//$input-height-border:                   $input-btn-border-width * 2 !default;
+
+$input-transition:                        border-color ease-in-out .15s, box-shadow ease-in-out .15s !default;
+//$input-group-addon-border-color:        $input-border-color !default;

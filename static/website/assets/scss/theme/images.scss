@@ -1,0 +1,22 @@
+	
+//images  ////////////////////////////////
+
+ img.img-rised,
+ img.img-shadow {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 25px 0px;
+}
+img {
+    max-width: 100%;
+    border-radius: 1px;
+}
+
+.img-animated{
+  -webkit-transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+  -moz-transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+  transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+  &.img-animated:hover {
+    box-shadow: 0 40px 40px rgba(0,0,0,.16);
+    transform: translate(0,-20px);
+    transition-delay: 0s !important;
+  }
+}

@@ -1,0 +1,127 @@
+
+//buttons  ////////////////////////////////
+button:hover,
+.btn:hover{
+	cursor:pointer;
+}
+.btn-primary:not(.btn-link)	{
+	color: $white;
+}
+.nav-link.btn-white:active:hover {
+    color: #fff !important;
+}
+.nav-link.btn-white.active:hover {
+    color: #fff !important;
+}
+.btn.btn-link{
+	background: transparent;
+}
+
+//nav pills, nav pager
+
+.nav-pills .nav-link{
+	border-radius: $border-radius-rounded;
+}
+
+.page-item{
+	margin:4px;
+}
+.page-item:first-child .page-link {
+    margin-left: 0;
+    border-top-left-radius: $border-radius-rounded;
+    border-bottom-left-radius: $border-radius-rounded;
+}
+
+.page-item:last-child .page-link {
+    border-top-right-radius: $border-radius-rounded;
+    border-bottom-right-radius: $border-radius-rounded;
+}
+
+.page-item.active .page-link,
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link{
+	box-shadow: $mdl-shadow--32dp;
+}
+
+.nav-pills .nav-link.nav-icon,
+.page-link {
+    border-radius: $border-radius-rounded;
+    height: 48px;
+    width: 48px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn.btn-rised{
+	box-shadow: $btn-rised-box-shadow;
+	-webkit-box-shadow:  $btn-rised-box-shadow;
+		&:hover{
+			box-shadow:  $mdl-shadow--16dp;
+				-webkit-box-shadow:   $mdl-shadow--16dp;
+		}
+}
+
+.btn{
+	font-size: .71875em;
+	letter-spacing: 0.1em !important;
+	font-weight: 400;
+	text-transform:uppercase;
+    line-height: 1.5em;
+    transition: background .2s cubic-bezier(.645,.045,.355,1),color .2s cubic-bezier(.645,.045,.355,1),border .2s cubic-bezier(.645,.045,.355,1);
+    letter-spacing: .04688em;
+}
+.jumbotron .btn.btn-lg{
+  font-size:.65em !important;
+  padding: 1.3625em 2.6125em;
+}
+
+.btn.pill-btn,
+.btn.btn-round{
+	border-radius: $border-radius-rounded;
+}
+ .btn:hover{
+	box-shadow: $btn-active-box-shadow;
+ }
+
+ .btn.btn-icon.btn-round{
+    height: 3rem;
+    width: 3rem;
+    padding: 0;
+    font-size: 0.9375rem;
+    overflow: hidden;
+    position: relative;
+    line-height: normal;
+    vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .navbar .navbar-nav>a.btn.btn-icon {
+    height: 2.375rem;
+    min-width: 2.375rem;
+    width: 2.375rem;
+    padding: 0;
+    font-size: 0.9375rem;
+    overflow: hidden;
+    position: relative;
+    line-height: normal;
+}
+
+ .btn-white{
+	background:#fff;
+	color: $dark;
+    box-shadow: $btn-rised-box-shadow;
+	-webkit-box-shadow:  $btn-rised-box-shadow;
+	    &:hover{
+			color: $primary !important;
+		}
+ }
+
+.btn[class*="bg-gradient"]{
+  color: $white;
+  border:none;
+  &:active{
+    color: $white;
+  }
+}

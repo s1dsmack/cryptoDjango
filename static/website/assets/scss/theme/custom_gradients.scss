@@ -1,0 +1,152 @@
+
+
+/* GRADIENTS */
+/* to add new .bgg-{new gradient name}*/
+/* see more gradients at  https://uigradients.com */
+
+/*import gradients mixins from bootstrap source */
+@import "../../../../node_modules/bootstrap/scss/mixins/gradients";
+
+.bg-gradient-light-green{
+   background-color: #2cdd9b;
+   @include gradient-x-three-colors($start-color: #1dc8cc, $mid-color: #1dc8cc, $color-stop: 50%, $end-color: #2cdd9b);
+}
+
+.bg-gradient-green{
+    background-color: #54bcb3;
+    background-image: linear-gradient(to left, #54bcb3, #48d795);
+    background-repeat: no-repeat;
+}
+
+.bg-gradient-yellow{
+    background-color: #FDF100;
+    @include gradient-x($start-color: #FDF100, $end-color: #ff8d1b, $start-percent: 0%, $end-percent: 100%);
+}
+.bg-gradient-red{
+  background-color: #ec4343;
+  @include gradient-x($start-color: #ec4343,  $end-color: #d94d7a);
+}
+
+.bg-gradient-dark{
+  background-color: #828380;
+  @include gradient-x($start-color: #232526, $end-color: #828380, $start-percent: 0%, $end-percent: 100%);
+}
+
+.bg-gradient-rose{
+  background-color: #e9499b;
+  @include gradient-x($start-color: #64e5df, $end-color: #e9499b, $start-percent: 0%, $end-percent: 100%);
+}
+
+.bg-gradient-orange{
+  background-color: #fe8c00;
+  @include gradient-x($start-color: #f83600, $end-color: #fe8c00, $start-percent: 0%, $end-percent: 100%);
+}
+
+.bg-gradient-light-orange{
+  background-color: #f83600;
+  @include gradient-x($start-color: #fe8c00, $end-color: #f83600, $start-percent: 0%, $end-percent: 100%);
+}
+
+.bg-gradient-blue{
+  background-color: #514A9D;
+  @include gradient-x($start-color: #24C6DC, $end-color: #514A9D, $start-percent: 0%, $end-percent: 100%);
+}
+
+.bg-gradient-light-blue{
+   background-color: #64cde3;
+   @include gradient-x-three-colors($start-color: #7a6ae6, $mid-color: #64a6e7, $color-stop: 50%, $end-color: #64cde3);
+
+}
+
+.bg-gradient-violet{
+	background-color: #e9499b;
+	@include gradient-x($start-color: #745ae7, $end-color: #e9499b, $start-percent: 0%, $end-percent: 100%);
+}
+
+.bg-gradient-purple{
+  background-color: #ecb8fe;
+    @include gradient-x($start-color: #ecb8fe,  $end-color: #839dfe,  $start-percent: 0%, $end-percent: 100%);
+}
+
+.bg-gradient-blue-purple{
+  background-color: #4352a3;
+  @include gradient-x($start-color: #cc0e89, $end-color: #4352a3, $start-percent: 0%, $end-percent: 100%);
+}
+
+.bg-gradient-light{
+  background-color: #ECE9E6;
+  @include gradient-x($start-color: #FFFFFF, $end-color: #ECE9E6, $start-percent: 0%, $end-percent: 100%);
+}
+
+/* Directional gradients */
+.bgd-gradient-light-green{
+   background-color: #2cdd9b;
+   @include gradient-directional($start-color: #1dc8cc, $end-color: #2cdd9b, $deg: 45deg);
+}
+
+
+.bgd-gradient-green{
+    background-color:  #48d795;
+    @include gradient-directional($start-color: #54bcb3, $end-color:  #48d795, $deg: 45deg);
+}
+
+.bgd-gradient-yellow{
+    background-color: #FDF100;
+    @include gradient-directional($start-color: #FDF100, $end-color: #ff8d1b, $deg: 45deg);
+}
+.bgd-gradient-red{
+  background-color: #ec4343;
+  @include gradient-directional($start-color: #ec4343,  $end-color: #d94d7a ,$deg: 45deg);
+}
+
+.bgd-gradient-dark{
+  background-color: #828380;
+  @include gradient-directional($start-color: #232526, $end-color: #828380, $deg: 45deg);
+}
+
+.bgd-gradient-rose{
+  background-color: #e9499b;
+  @include gradient-directional($start-color: #64e5df, $end-color: #e9499b, $deg: -45deg);
+}
+
+.bgd-gradient-orange{
+  background-color: #fe8c00;
+  @include gradient-directional($start-color: #f83600, $end-color: #fe8c00, $deg: 45deg);
+}
+
+.bgd-gradient-light-orange{
+  background-color: #f83600;
+  @include gradient-directional($start-color: #fe8c00, $end-color: #f83600, $deg: 45deg);
+}
+
+.bgd-gradient-blue{
+  background-color: #514A9D;
+  @include gradient-directional($start-color: #24C6DC, $end-color: #514A9D, $deg: 45deg);
+}
+
+.bgd-gradient-light-blue{
+   background-color: #64cde3;
+   @include gradient-directional($start-color: #7a6ae6, $end-color: #64cde3, $deg: 45deg);
+
+}
+
+.bgd-gradient-violet{
+	background-color: #e9499b;
+	@include gradient-directional($start-color: #745ae7, $end-color: #e9499b, $deg: 45deg);
+}
+
+
+.bgd-gradient-purple{
+  background-color: #ecb8fe;
+    @include gradient-directional($start-color: #ecb8fe,  $end-color: #839dfe, $deg: 45deg);
+}
+
+.bgd-gradient-blue-purple{
+  background-color: #4352a3;
+  @include gradient-directional($start-color: #cc0e89, $end-color: #4352a3,  $deg: 45deg);
+}
+
+.bgd-gradient-light{
+  background-color: #ECE9E6;
+  @include gradient-directional($start-color: #FFFFFF, $end-color: #ECE9E6, $deg: 45deg);
+}
